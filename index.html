@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کانون شیر و خورشید - خانه فرهنگ، زبان، تاریخ و هویت ایران</title>
+    
+    <!-- Google Fonts: Vazirmatn for Persian, Playfair Display for Latin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for modern vector icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
+    <!-- Header Controls: Language Switcher -->
+    <header class="top-bar">
+        <div class="lang-selector">
+            <i class="fa-solid fa-globe"></i>
+            <select id="languageSelect" onchange="changeLanguage(this.value)">
+                <option value="fa" selected>فارسی (Persian)</option>
+                <option value="de">Deutsch (German)</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Top Banner Header -->
+        <header class="hero-header">
+            <div class="portrait-frame left-frame">
+                <img src="assets/images/portrait-left.jpg" alt="Historical Portrait">
+            </div>
+
+            <div class="main-title-block">
+                <div class="emblem">
+                    <img src="assets/images/logo.png" alt="Lion and Sun Emblem">
+                </div>
+                <h2 class="sub-heading-top" data-i18n="kanun">کانون</h2>
+                <h1 class="main-title" data-i18n="lion_sun">شیر و خورشید</h1>
+                <p class="tagline" data-i18n="tagline">خانه فرهنگ، زبان، تاریخ و هویت ایران</p>
+                <p class="sub-tagline" data-i18n="schild_assoc">انجمن پادشاهی شیلد</p>
+            </div>
+
+            <div class="portrait-frame right-frame">
+                <img src="assets/images/portrait-right.jpg" alt="Historical Portrait">
+            </div>
+        </header>
+
+        <!-- Welcome Banner -->
+        <section class="gold-banner welcome-banner">
+            <span class="star-icon">✶</span>
+            <p data-i18n="welcome_msg">به همه شما، با هر دین و باور و گویشی که هستید، پاکدلانه خوشامد می‌گوییم</p>
+            <span class="star-icon">✶</span>
+        </section>
+
+        <!-- Intro Description -->
+        <section class="intro-box">
+            <p data-i18n="intro_text">جایی آرام، دنج و زیبا برای گردهمایی، گفتمان، خوانش، پژوهش و ایجاد پیوستگی میان انسان‌ها با فرهنگ‌ها و پیشینه‌های گوناگون.</p>
+        </section>
+
+        <!-- Features Grid with Middle Portrait -->
+        <section class="features-wrapper">
+            <div class="portrait-frame mid-frame">
+                <img src="assets/images/portrait-mid.jpg" alt="Interior Portrait">
+            </div>
+
+            <div class="features-card">
+                <h3 class="features-title" data-i18n="features_title">در خانه شیر و خورشید می‌توانید:</h3>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-mug-hot"></i></div>
+                        <p data-i18n="f1">در محیطی آرام از قهوه، چای، نوشیدنی‌ها، کیک و میان‌وعده‌های سبک لذت ببرید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><span class="badge-de-fa">DE | FA</span></div>
+                        <p data-i18n="f2">در کلاس‌های آموزش زبان فارسی و آلمانی در فضایی صمیمی و دوستانه شرکت کنید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                        <p data-i18n="f3">در کتابخانه دنج انجمن مطالعه کنید و به نسخه‌های گران‌سنگ ادبیات پارسی دست یابید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-microphone"></i></div>
+                        <p data-i18n="f4">در شب‌های ادبی، شعرخوانی، شاهنامه‌خوانی، موسیقی و برنامه‌های هنری حضور یابید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-people-group"></i></div>
+                        <p data-i18n="f5">در نشست‌های فرهنگی، سمینارها و برنامه‌های آموزشی شرکت کنید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-palette"></i></div>
+                        <p data-i18n="f6">از نمایشگاه‌های نقاشی، عکس و هنرهای تجسمی بازدید کنید و هنرمندان را حمایت کنید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-flag"></i></div>
+                        <p data-i18n="f7">جلسات، دورهمی‌ها، جشن‌های کوچک، تولد و مناسبت‌های خصوصی خود را در فضایی زیبا برگزار کنید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-landmark"></i></div>
+                        <p data-i18n="f8">در جشن‌های ملی و فرهنگی ایران، آیین‌ها و مراسم سنتی همراه ما باشید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-handshake"></i></div>
+                        <p data-i18n="f9">با افراد جدید آشنا شوید و دوستی‌ها و پیوندهای تازه‌ای شکل دهید.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="icon-box"><i class="fa-solid fa-child-reaching"></i></div>
+                        <p data-i18n="f10">برنامه‌های فرهنگی و آموزشی ویژه کودکان و نوجوانان برگزار می‌شود.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-card">
+            <p data-i18n="about_p1">خانه شیر و خورشید محلی برای پاسداری از فرهنگ، زبان و تاریخ ایران است.</p>
+            <p data-i18n="about_p2">ما باور داریم که فرهنگ و تاریخ ایران، میراث گران‌بهای هزاران ساله این سرزمین است که باید آن را شناخت، حفظ کرد و به نسل‌های آینده منتقل ساخت. این خانه پلی است برای گفت‌وگوی فرهنگی، تبادل اندیشه، احترام متقابل و ایجاد پیوندی میان جامعه ایرانی، جامعه اتریش و همه علاقه‌مندان به فرهنگ و همزیستی. فعالیت‌های این کانون با پشتیبانی و کمک‌های داوطلبانه (Donation / Spende) از انجمن شیلد انجام می‌گیرد.</p>
+        </section>
+
+        <!-- Sub Banner -->
+        <section class="gold-banner open-banner">
+            <span class="star-icon">✶</span>
+            <p data-i18n="open_msg">درهای ما به روی همه باز است.</p>
+            <span class="star-icon">✶</span>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="gallery-grid">
+            <div class="gallery-item"><img src="assets/images/gallery-1.jpg" alt="Gallery Photo 1"></div>
+            <div class="gallery-item"><img src="assets/images/gallery-2.jpg" alt="Gallery Photo 2"></div>
+            <div class="gallery-item"><img src="assets/images/gallery-3.jpg" alt="Gallery Photo 3"></div>
+            <div class="gallery-item"><img src="assets/images/gallery-4.jpg" alt="Gallery Photo 4"></div>
+            <div class="gallery-item"><img src="assets/images/gallery-5.jpg" alt="Gallery Photo 5"></div>
+        </section>
+
+        <!-- Footer / Contact Info -->
+        <footer class="site-footer">
+            <div class="footer-col address-col">
+                <i class="fa-solid fa-location-dot gold-icon"></i>
+                <div>
+                    <p>Scheffenberggasse 5 / 1 / R02</p>
+                    <p>1180 Wien (Waldeckgasse)</p>
+                    <p>Austria</p>
+                </div>
+            </div>
+
+            <div class="footer-col contact-col">
+                <p><a href="mailto:info.lionandsun@gmail.com"><i class="fa-solid fa-envelope"></i> info.lionandsun@gmail.com</a></p>
+                <p><a href="https://instagram.com/lionandsuncenter" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> lionandsuncenter</a></p>
+                <p><a href="tel:+4368110320389"><i class="fa-solid fa-phone"></i> 0681 103 20 389</a></p>
+                <p><a href="tel:+4369010423511"><i class="fa-solid fa-phone"></i> 0690 104 23 511</a></p>
+            </div>
+
+            <div class="footer-col qr-col">
+                <img src="assets/images/qr-code.png" alt="QR Code">
+            </div>
+
+            <div class="footer-col branding-col">
+                <p class="brand-title">انجمن پادشاهی</p>
+                <h3 class="brand-name">شیلد</h3>
+                <a href="https://www.lionandsuncenter.org" target="_blank" class="website-link">www.lionandsuncenter.org</a>
+                <div class="schild-logo">
+                    <img src="assets/images/schild-logo.png" alt="Schild Emblem">
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bottom Quote -->
+        <section class="bottom-quote">
+            <p data-i18n="bottom_quote">فرهنگ، ریشه یک ملت است؛ زبان، جان آن؛ و تاریخ، حافظه آن.<br>خانه شیر و خورشید، پاسدار این میراث جاودان است.</p>
+        </section>
+
+    </main>
+
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
