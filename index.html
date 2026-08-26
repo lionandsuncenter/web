@@ -1,471 +1,751 @@
+<!--
+  Developed by: Sadra Babai
+  GitHub: https://github.com/xsadra
+-->
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>کانون شیر و خورشید | به‌زودی ...</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <style>
-        :root {
-            --bg-deep: #08080a;
-            --gold-main: #d4af37;
-            --gold-light: #fbe69b;
-            --gold-dark: #8c7323;
-            --gold-gradient: linear-gradient(135deg, #fbe69b 0%, #d4af37 50%, #8c7323 100%);
-            --glass-bg: rgba(20, 20, 24, 0.65);
-            --glass-border: 1px solid rgba(212, 175, 55, 0.2);
-            --text-main: #f4f4f5;
-            --text-muted: #a1a1aa;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>خانه شیر و خورشید | خانه فرهنگ، دیدار، آموزش و همبستگی</title>
+<meta name="description" content="خانه شیر و خورشید در وین، محلی باز برای دیدار، فرهنگ، آموزش و فعالیت‌های اجتماعی داوطلبانه." data-i18n-attr="content:meta.description" />
+<meta name="author" content="Sadra Babai (github.com/xsadra)" />
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Open Graph / Facebook / LinkedIn / WhatsApp Social Share Card Previews -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.lionandsuncenter.org/" />
+<meta property="og:title" content="Haus des Löwen und der Sonne | خانه شیر و خورشید" />
+<meta property="og:description" content="Kultur, Dialog, Lernen, und Solidarität in Wien | مرکز فرهنگ، گفتگو، یادگیری و همبستگی در وین" />
+<meta property="og:image" content="https://www.lionandsuncenter.org/assets/img/logo-lion-sun.jpg" />
 
-        body {
-            background-color: var(--bg-deep);
-            color: var(--text-main);
-            font-family: 'Vazirmatn', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            overflow-x: hidden;
-            position: relative;
-        }
+<!-- Twitter / X Card Previews -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://www.lionandsuncenter.org/" />
+<meta property="twitter:title" content="Haus des Löwen und der Sonne | خانه شیر و خورشید" />
+<meta property="twitter:description" content="Kultur, Dialog, Lernen, und Solidarität in Wien | مرکز فرهنگ، گفتگو، یادگیری و همبستگی در وین" />
+<meta property="twitter:image" content="https://www.lionandsuncenter.org/assets/img/logo-lion-sun.jpg" />
 
-        /* Ambient Background Glow */
-        .bg-glow {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(8, 8, 10, 0) 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            pointer-events: none;
-        }
+<!-- Structured Data (Schema.org JSON-LD) for Search Engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Haus des Löwen und der Sonne",
+  "url": "https://www.lionandsuncenter.org",
+  "creator": {
+    "@type": "Person",
+    "name": "Sadra Babai",
+    "url": "https://github.com/xsadra"
+  }
+}
+</script>
 
-        /* Header / Language Switcher */
-        header {
-            width: 100%;
-            max-width: 1200px;
-            padding: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon-512.png" />
+<link rel="shortcut icon" href="assets/favicon.ico" />
+<link rel="apple-touch-icon" href="assets/img/favicon-192.png" />
+<meta name="theme-color" content="#0b0906" />
 
-        .brand-mini {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
 
-        .brand-mini img {
-            height: 40px;
-            object-fit: contain;
-        }
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" referrerpolicy="no-referrer" />
 
-        .brand-title {
-            font-size: 1rem;
-            color: var(--gold-light);
-            font-weight: 700;
-        }
-
-        .lang-selector {
-            display: flex;
-            gap: 6px;
-            background: rgba(0,0,0,0.4);
-            padding: 4px 6px;
-            border-radius: 8px;
-            border: var(--glass-border);
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            padding: 4px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        .lang-btn.active, .lang-btn:hover {
-            background: var(--gold-gradient);
-            color: var(--bg-deep);
-        }
-
-        /* Main Glass Card */
-        main {
-            width: 100%;
-            max-width: 750px;
-            padding: 0 20px;
-            margin: 40px 0;
-        }
-
-        .card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: var(--glass-border);
-            border-radius: 24px;
-            padding: 50px 30px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-            position: relative;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--gold-light);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 24px;
-        }
-
-        .badge i {
-            font-size: 0.75rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .main-title {
-            font-size: 3.2rem;
-            font-weight: 900;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: #ddd;
-            margin-bottom: 8px;
-        }
-
-        .tagline {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-        }
-
-        /* Countdown */
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            margin-bottom: 40px;
-            direction: ltr;
-        }
-
-        .time-box {
-            background: rgba(10, 10, 12, 0.7);
-            border: var(--glass-border);
-            border-radius: 12px;
-            padding: 14px;
-            min-width: 75px;
-        }
-
-        .time-box span {
-            display: block;
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--gold-light);
-            line-height: 1;
-        }
-
-        .time-box label {
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            margin-top: 6px;
-            display: block;
-        }
-
-        /* Notify Form */
-        .notify-form {
-            display: flex;
-            max-width: 460px;
-            margin: 0 auto 30px;
-            gap: 8px;
-        }
-
-        .notify-input {
-            flex: 1;
-            background: rgba(0, 0, 0, 0.5);
-            border: var(--glass-border);
-            border-radius: 10px;
-            padding: 12px 16px;
-            color: #fff;
-            font-family: inherit;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        .notify-input:focus {
-            border-color: var(--gold-main);
-        }
-
-        .notify-btn {
-            background: var(--gold-gradient);
-            border: none;
-            border-radius: 10px;
-            padding: 12px 24px;
-            color: var(--bg-deep);
-            font-weight: 700;
-            font-family: inherit;
-            cursor: pointer;
-            transition: 0.3s;
-            white-space: nowrap;
-        }
-
-        .notify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        /* Quick Contact Links */
-        .contact-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding-top: 20px;
-            border-top: 1px dashed rgba(212, 175, 55, 0.2);
-        }
-
-        .contact-item {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.88rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-        }
-
-        .contact-item:hover {
-            color: var(--gold-light);
-        }
-
-        .contact-item i {
-            color: var(--gold-main);
-        }
-
-        /* Footer */
-        footer {
-            padding: 24px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        footer p {
-            margin-bottom: 4px;
-        }
-
-        /* Mobile Adaptations */
-        @media (max-width: 600px) {
-            .main-title { font-size: 2.3rem; }
-            .card { padding: 35px 20px; }
-            .countdown { gap: 8px; }
-            .time-box { min-width: 65px; padding: 10px; }
-            .time-box span { font-size: 1.4rem; }
-            .notify-form { flex-direction: column; }
-            .notify-btn { width: 100%; }
-        }
-    </style>
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body id="top">
 
-    <div class="bg-glow"></div>
+<!-- Skip link for keyboard / screen-reader users -->
+<a class="skip-link" href="#main-content" data-i18n="nav.home">رفتن به محتوای اصلی</a>
 
-    <!-- Header -->
-    <header>
-        <div class="brand-mini">
-            <img src="assets/images/logo.png" alt="Logo" onerror="this.style.display='none'">
-            <span class="brand-title" data-i18n="brand">شیر و خورشید</span>
+<!-- ============================= HEADER ============================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="Lion and Sun Center">
+      <img src="assets/img/logo-lion-sun.jpg" alt="Lion and Sun Center emblem" class="brand-emblem" width="52" height="52" />
+      <span class="brand-name" data-i18n="sections.s1.title">خانه شیر و خورشید</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#top" data-i18n="nav.home">صفحه اصلی</a>
+      <a href="#about" data-i18n="nav.about">معرفی مرکز</a>
+      <a href="#activities" data-i18n="nav.activities">فعالیت‌ها و خدمات</a>
+      <a href="#schedule" data-i18n="nav.schedule">برنامه هفتگی</a>
+      <a href="#events" data-i18n="nav.events">رویدادها</a>
+      <a href="#contact" data-i18n="nav.contact">تماس با ما</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn is-active" data-lang="fa" aria-pressed="true">فا</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============================= SECTION 1: HERO ============================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="assets/img/library.jpg" alt="" loading="eager" />
+      <div class="hero-bg-scrim"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-center">
+        <p class="hero-eyebrow" data-i18n="sections.s1.subtitle">فرهنگ · دیدار · آموزش · همبستگی</p>
+        <div class="hero-emblem">
+          <div class="hero-emblem-glow" aria-hidden="true"></div>
+          <img src="assets/img/logo-lion-sun.jpg" alt="Lion and Sun emblem" />
+        </div>
+        <h1 id="hero-title" data-i18n="sections.s1.title">خانه شیر و خورشید</h1>
+        <p class="hero-subtitle" data-i18n="sections.s1.intro1">مکانی باز برای انسانهایی با پیشینهها و نسلهای گوناگون.</p>
+        <p class="hero-body-text" data-i18n="sections.s1.intro2">خانه شیر و خورشید یک فضای باز برای دیدار، فرهنگ و فعالیت اجتماعی در وین است؛ جایی که کافه، کتابخانه، آموزش، فرهنگ، ارتباط اجتماعی و فعالیت داوطلبانه در کنار یکدیگر قرار گرفتهاند.</p>
+        <p class="hero-footer-text" data-i18n="sections.s1.intro3">درهای ما به روی همه باز است.</p>
+        <a href="#contact" class="btn btn-gold" data-i18n="nav.contact">با ما در ارتباط باشید</a>
+      </div>
+
+      <!-- Visual Placeholder for Hero Banner -->
+      <div class="image-placeholder hero-placeholder">
+        <div class="placeholder-content">
+          <div class="placeholder-icon"><i class="fa-solid fa-image"></i></div>
+          <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+          <p class="placeholder-desc" data-i18n="placeholders.hero"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SECTION 2: ABOUT US ============================= -->
+  <section class="section section--about" id="about">
+    <div class="section-inner">
+      <div class="section-card">
+        <div class="card-content">
+          <h2 class="card-title" data-i18n="sections.s2.title">خانه شیر و خورشید چیست؟</h2>
+          <p class="card-desc" data-i18n="sections.s2.text">خانه شیر و خورشید یک فضای فرهنگی و اجتماعی و یک محل دیدار در وین است. هدف این مرکز ایجاد محیطی آرام، در دسترس و بیننسلی است که در آن انسانها بتوانند با یکدیگر آشنا شوند، گفتگو کنند، از یکدیگر بیاموزند و در فعالیتهای مشترک شرکت کنند.</p>
+          
+          <h3 class="focus-title" data-i18n="sections.s2.focusTitle">تمرکز اصلی مرکز بر این موارد است:</h3>
+          <ul class="focus-list">
+            <li data-i18n="sections.s2.focus1">مشارکت اجتماعی</li>
+            <li data-i18n="sections.s2.focus2">ادغام و همزیستی</li>
+            <li data-i18n="sections.s2.focus3">تقویت زبان</li>
+            <li data-i18n="sections.s2.focus4">چندزبانگی</li>
+            <li data-i18n="sections.s2.focus5">آموزش فرهنگی</li>
+            <li data-i18n="sections.s2.focus6">ارتباط میان نسلها</li>
+            <li data-i18n="sections.s2.focus7">فعالیت داوطلبانه</li>
+          </ul>
+          <p class="focus-note" data-i18n="sections.s2.note">(این موارد مستقیماً در پروژه حمایت مالی تعریف شدهاند.)</p>
+        </div>
+        
+        <!-- About Center Image Placeholder -->
+        <div class="image-placeholder">
+          <div class="placeholder-content">
+            <div class="placeholder-icon"><i class="fa-solid fa-people-roof"></i></div>
+            <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+            <p class="placeholder-desc" data-i18n="placeholders.about"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SECTIONS 3 & 4: SPACES ============================= -->
+  <section class="section section--spaces" id="spaces">
+    <div class="section-inner">
+      <h2 class="section-main-heading section-heading--center">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <span data-i18n="headings.spaces">فضاهای مرکز</span>
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+      </h2>
+      
+      <div class="activities-stack">
+        <!-- Section 3: Cafe -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s3.title">کافه و محل گردهمایی</h3>
+            <p class="card-desc" data-i18n="sections.s3.intro">در کافه میتوان از موارد زیر لذت برد:</p>
+            <ul class="focus-list">
+              <li data-i18n="sections.s3.item1">قهوه</li>
+              <li data-i18n="sections.s3.item2">چای</li>
+              <li data-i18n="sections.s3.item3">نوشیدنیهای مختلف</li>
+              <li data-i18n="sections.s3.item4">کیک و شیرینی</li>
+              <li data-i18n="sections.s3.item5">میانوعدههای سبک</li>
+            </ul>
+            <p class="card-desc" data-i18n="sections.s3.outro">اما کافه فقط برای خوردن و نوشیدن نیست؛ هدف آن ایجاد یک فضای دوستانه برای گفتگو، آشنایی و ارتباط میان افراد است.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-mug-hot"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.cafe"></p>
+            </div>
+          </div>
         </div>
 
-        <div class="lang-selector">
-            <button onclick="changeLanguage('fa')" class="lang-btn active">FA</button>
-            <button onclick="changeLanguage('de')" class="lang-btn">DE</button>
-            <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+        <!-- Section 4: Library -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s4.title">کتابخانه و مطالعه</h3>
+            <p class="card-desc" data-i18n="sections.s4.intro">یک فضای آرام برای:</p>
+            <ul class="focus-list">
+              <li data-i18n="sections.s4.item1">مطالعه</li>
+              <li data-i18n="sections.s4.item2">خواندن کتاب</li>
+              <li data-i18n="sections.s4.item3">یادگیری</li>
+              <li data-i18n="sections.s4.item4">ادبیات</li>
+              <li data-i18n="sections.s4.item5">تاریخ</li>
+              <li data-i18n="sections.s4.item6">فرهنگ ایران</li>
+            </ul>
+            <p class="card-desc" data-i18n="sections.s4.outro">کتابخانه میتواند محلی برای آشنایی با ادبیات و فرهنگ ایرانی و همچنین گفتگو و تبادل نظر باشد.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.library"></p>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <!-- Main Content -->
-    <main>
-        <div class="card">
-            
-            <div class="badge">
-                <i class="fa-solid fa-circle"></i>
-                <span data-i18n="status">وب‌سایت در دست ساخت است</span>
+  <!-- ============================= SECTIONS 5 - 10: ACTIVITIES & SERVICES ============================= -->
+  <section class="section section--activities" id="activities">
+    <div class="section-inner">
+      <h2 class="section-main-heading section-heading--center">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <span data-i18n="nav.activities">فعالیت‌ها و خدمات</span>
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+      </h2>
+      
+      <div class="activities-stack">
+        <!-- Section 5: Language & Education -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s5.title">زبان و آموزش</h3>
+            <p class="card-desc" data-i18n="sections.s5.intro1">یکی از برنامههای اصلی مرکز، ایجاد فرصت برای تمرین زبان آلمانی در زندگی روزمره است.</p>
+            <p class="card-desc" data-i18n="sections.s5.intro2">این برنامه جایگزین کلاس رسمی و مدرکدار زبان نیست، بلکه مکمل آن است.</p>
+            <h4 class="focus-title" data-i18n="sections.s5.topicsTitle">موضوعات میتواند شامل موارد زیر باشد:</h4>
+            <ul class="focus-list">
+              <li data-i18n="sections.s5.t1">معرفی و آشنایی</li>
+              <li data-i18n="sections.s5.t2">خرید</li>
+              <li data-i18n="sections.s5.t3">مراجعه به پزشک</li>
+              <li data-i18n="sections.s5.t4">استفاده از حملونقل عمومی</li>
+              <li data-i18n="sections.s5.t5">همسایگی</li>
+              <li data-i18n="sections.s5.t6">مدرسه و مهدکودک</li>
+              <li data-i18n="sections.s5.t7">محیط کار</li>
+              <li data-i18n="sections.s5.t8">ادارات</li>
+              <li data-i18n="sections.s5.t9">موقعیتهای روزمره</li>
+            </ul>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-comments"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.language"></p>
             </div>
-
-            <h1 class="main-title" data-i18n="title">کانون شیر و خورشید</h1>
-            <p class="subtitle" data-i18n="subtitle">خانه فرهنگ، زبان، تاریخ و هویت ایران</p>
-            <p class="tagline" data-i18n="tagline">انجمن پادشاهی شیلد • وین، اتریش</p>
-
-            <!-- Countdown Timer -->
-            <div class="countdown">
-                <div class="time-box">
-                    <span id="days">00</span>
-                    <label data-i18n="d">روز</label>
-                </div>
-                <div class="time-box">
-                    <span id="hours">00</span>
-                    <label data-i18n="h">ساعت</label>
-                </div>
-                <div class="time-box">
-                    <span id="minutes">00</span>
-                    <label data-i18n="m">دقیقه</label>
-                </div>
-                <div class="time-box">
-                    <span id="seconds">00</span>
-                    <label data-i18n="s">ثانیه</label>
-                </div>
-            </div>
-
-            <!-- Email Notification -->
-            <form class="notify-form" onsubmit="event.preventDefault(); alert('با تشکر! ایمیل شما ثبت شد.');">
-                <input type="email" class="notify-input" placeholder="ایمیل خود را وارد کنید..." data-i18n-ph="ph" required>
-                <button type="submit" class="notify-btn" data-i18n="btn">اطلاع‌رسانی</button>
-            </form>
-
-            <!-- Direct Contact -->
-            <div class="contact-bar">
-                <a href="mailto:info.lionandsun@gmail.com" class="contact-item">
-                    <i class="fa-solid fa-envelope"></i> info.lionandsun@gmail.com
-                </a>
-                <a href="https://instagram.com/lionandsuncenter" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-instagram"></i> @lionandsuncenter
-                </a>
-                <a href="tel:+4368110320389" class="contact-item">
-                    <i class="fa-solid fa-phone"></i> 0681 103 20 389
-                </a>
-            </div>
-
+          </div>
         </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>Scheffenberggasse 5 / 1 / R02, 1180 Wien (Waldeckgasse)</p>
-        <p data-i18n="footer_sub">انجمن پادشاهی شیلد • Schild Royal Association</p>
-    </footer>
+        <!-- Section 6: Children & Multilingualism -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s6.title">کودکان و چندزبانگی</h3>
+            <p class="card-desc" data-i18n="sections.s6.intro">ما چندزبانگی را یک فرصت و سرمایه برای آموزش، هویت و ارتباط میان فرهنگها میدانیم.</p>
+            <h4 class="focus-title" data-i18n="sections.s6.programsTitle">برنامههای پیشنهادی:</h4>
+            <ul class="focus-list">
+              <li data-i18n="sections.s6.p1">آموزش زبان به شکل بازی</li>
+              <li data-i18n="sections.s6.p2">خواندن و نوشتن</li>
+              <li data-i18n="sections.s6.p3">داستانگویی</li>
+              <li data-i18n="sections.s6.p4">شعر</li>
+              <li data-i18n="sections.s6.p5">موسیقی</li>
+              <li data-i18n="sections.s6.p6">فعالیتهای خلاقانه</li>
+              <li data-i18n="sections.s6.p7">ادبیات</li>
+              <li data-i18n="sections.s6.p8">آشنایی با سنتهای فرهنگی</li>
+              <li data-i18n="sections.s6.p9">پروژههای مشترک</li>
+            </ul>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-child"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.children"></p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Scripts -->
-    <script>
-        const translations = {
-            fa: {
-                brand: "شیر و خورشید",
-                status: "وب‌سایت در دست ساخت است",
-                title: "کانون شیر و خورشید",
-                subtitle: "خانه فرهنگ، زبان، تاریخ و هویت ایران",
-                tagline: "انجمن پادشاهی شیلد • وین، اتریش",
-                d: "روز", h: "ساعت", m: "دقیقه", s: "ثانیه",
-                ph: "ایمیل خود را وارد کنید...",
-                btn: "اطلاع‌رسانی",
-                footer_sub: "انجمن پادشاهی شیلد • Schild Royal Association"
-            },
-            de: {
-                brand: "Löwe & Sonne",
-                status: "Website befindet sich im Aufbau",
-                title: "Zentrum Löwe & Sonne",
-                subtitle: "Haus der iranischen Kultur, Sprache, Geschichte und Identität",
-                tagline: "Königliche Vereinigung Schild • Wien, Österreich",
-                d: "Tage", h: "Std", m: "Min", s: "Sek",
-                ph: "E-Mail-Adresse eingeben...",
-                btn: "Benachrichtigen",
-                footer_sub: "Königliche Vereinigung Schild"
-            },
-            en: {
-                brand: "Lion & Sun",
-                status: "Website Under Construction",
-                title: "Lion & Sun Center",
-                subtitle: "House of Iranian Culture, Language, History, and Identity",
-                tagline: "Schild Royal Association • Vienna, Austria",
-                d: "Days", h: "Hours", m: "Mins", s: "Secs",
-                ph: "Enter your email...",
-                btn: "Notify Me",
-                footer_sub: "Schild Royal Association"
-            }
-        };
+        <!-- Section 7: Youth & Elderly - Generations Together -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s7.title">جوان و سالمند – با هم، نه تنها</h3>
+            <p class="card-desc" data-i18n="sections.s7.intro">یکی از اهداف مهم مرکز، کاهش تنهایی و ایجاد ارتباط میان نسلهاست. برنامهها میتواند شامل:</p>
+            <ul class="focus-list">
+              <li data-i18n="sections.s7.item1">دورهمی و گفتگو</li>
+              <li data-i18n="sections.s7.item2">پیادهروی</li>
+              <li data-i18n="sections.s7.item3">شطرنج و بازیهای فکری</li>
+              <li data-i18n="sections.s7.item4">مطالعه</li>
+              <li data-i18n="sections.s7.item5">موسیقی و آواز</li>
+              <li data-i18n="sections.s7.item6">گفتوگو درباره خاطرات و تجربههای زندگی</li>
+              <li data-i18n="sections.s7.item7">فعالیتهای خلاقانه</li>
+              <li data-i18n="sections.s7.item8">جشنهای کوچک</li>
+              <li data-i18n="sections.s7.item9">برنامههای فرهنگی</li>
+              <li data-i18n="sections.s7.item10">برنامههای مشترک میان نسلها</li>
+            </ul>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-hands-holding"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.intergenerational"></p>
+            </div>
+          </div>
+        </div>
 
-        function changeLanguage(lang) {
-            const isRTL = lang === 'fa';
-            document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
-            document.documentElement.setAttribute('lang', lang);
+        <!-- Section 8: Music & Art -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s8.title">موسیقی، هنر و خلاقیت</h3>
+            <p class="card-desc" data-i18n="sections.s8.intro">مرکز میتواند میزبان:</p>
+            <ul class="focus-list">
+              <li data-i18n="sections.s8.item1">کارگاههای موسیقی</li>
+              <li data-i18n="sections.s8.item2">آواز</li>
+              <li data-i18n="sections.s8.item3">ساز و موسیقی گروهی</li>
+              <li data-i18n="sections.s8.item4">برنامههای موسیقی برای کودکان</li>
+              <li data-i18n="sections.s8.item5">شبهای فرهنگی</li>
+              <li data-i18n="sections.s8.item6">شعر و ادبیات</li>
+              <li data-i18n="sections.s8.item7">نقاشی</li>
+              <li data-i18n="sections.s8.item8">عکاسی</li>
+            </ul>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-palette"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.music"></p>
+            </div>
+          </div>
+        </div>
 
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.innerText.toLowerCase() === lang) {
-                    btn.classList.add('active');
-                }
-            });
+        <!-- Section 9: Health Guidance -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s9.title">سلامت و راهنمایی اجتماعی</h3>
+            <p class="card-desc" data-i18n="sections.s9.intro">در این بخش هدف ارائه اطلاعات و ایجاد مسیر دسترسی به خدمات موجود است، نه جایگزین شدن با پزشک یا مراکز تخصصی.</p>
+            <h4 class="focus-title" data-i18n="sections.s9.activitiesTitle">فعالیت‌ها:</h4>
+            <ul class="focus-list">
+              <li data-i18n="sections.s9.a1">اطلاعرسانی درباره پیشگیری و سلامت</li>
+              <li data-i18n="sections.s9.a2">اطلاعات درباره سیستم بهداشت و درمان اتریش</li>
+              <li data-i18n="sections.s9.a3">راهنمایی در امور مربوط به مراقبت و زندگی روزمره</li>
+              <li data-i18n="sections.s9.a4">معرفی افراد به مراکز تخصصی و حرفهای</li>
+              <li data-i18n="sections.s9.a5">برنامهها و نشستهای اطلاعرسانی</li>
+            </ul>
+            <p class="card-desc" data-i18n="sections.s9.outro">پروژه برای این بخش، وجود افرادی با تجربه در پزشکی، پرستاری و مشاوره را نیز پیشبینی کرده است.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.health"></p>
+            </div>
+          </div>
+        </div>
 
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) el.innerText = translations[lang][key];
-            });
+        <!-- Section 10: Social Accompaniment -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s10.title">راهنمایی و همراهی اجتماعی</h3>
+            <p class="card-desc" data-i18n="sections.s10.intro">کمک و راهنمایی در زمینه:</p>
+            <ul class="focus-list">
+              <li data-i18n="sections.s10.item1">آموزش</li>
+              <li data-i18n="sections.s10.item2">تحصیل و مهارتآموزی</li>
+              <li data-i18n="sections.s10.item3">کار</li>
+              <li data-i18n="sections.s10.item4">ادارات</li>
+              <li data-i18n="sections.s10.item5">سلامت</li>
+              <li data-i18n="sections.s10.item6">مراقبت از کودکان</li>
+              <li data-i18n="sections.s10.item7">مراکز و خدمات اجتماعی</li>
+              <li data-i18n="sections.s10.item8">مراکز مشاوره موجود</li>
+            </ul>
+            <p class="card-desc font-weight-bold" data-i18n="sections.s10.outro1">اصل مهم این است:</p>
+            <p class="card-desc" data-i18n="sections.s10.outro2">ما جایگزین مراکز تخصصی نیستیم؛ بلکه پلی برای دسترسی آسانتر به خدمات موجود هستیم.</p>
+            <p class="card-desc" data-i18n="sections.s10.outro3">در صورت نیاز، افراد به مراکز تخصصی مربوط معرفی میشوند.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.social"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
-                const key = el.getAttribute('data-i18n-ph');
-                if (translations[lang][key]) el.placeholder = translations[lang][key];
-            });
+  <!-- ============================= SECTIONS 11 - 15: CULTURE & COMMUNITY ============================= -->
+  <section class="section section--community" id="community">
+    <div class="section-inner">
+      <h2 class="section-main-heading section-heading--center">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <span data-i18n="headings.culture">جامعه و تعاملات فرهنگی</span>
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+      </h2>
+      
+      <div class="activities-stack">
+        <!-- Section 11: Discover Austria -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s11.title">اتریش را بشناسیم</h3>
+            <p class="card-desc" data-i18n="sections.s11.intro">ادغام فقط یادگیری زبان نیست؛ شناخت جامعه و فرهنگ محل زندگی نیز اهمیت دارد.</p>
+            <h4 class="focus-title" data-i18n="sections.s11.programsTitle">برنامههای پیشنهادی:</h4>
+            <ul class="focus-list">
+              <li data-i18n="sections.s11.p1">پیادهرویهای گروهی</li>
+              <li data-i18n="sections.s11.p2">موزهها</li>
+              <li data-i18n="sections.s11.p3">کتابخانهها</li>
+              <li data-i18n="sections.s11.p4">مکانهای تاریخی</li>
+              <li data-i18n="sections.s11.p5">پارکها</li>
+              <li data-i18n="sections.s11.p6">مراکز عمومی</li>
+              <li data-i18n="sections.s11.p7">برنامههای فرهنگی</li>
+              <li data-i18n="sections.s11.p8">فعالیتهای مشترک</li>
+            </ul>
+            <p class="card-desc" data-i18n="sections.s11.outro">همچنین هدف این است که اتریشیها نیز فرصت آشنایی با افراد و فرهنگهای دیگر را داشته باشند.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-landmark"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.austria"></p>
+            </div>
+          </div>
+        </div>
 
-            localStorage.setItem('preferred_lang', lang);
-        }
+        <!-- Section 12: Persian Culture -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s12.title">فرهنگ، تاریخ و میراث ایران</h3>
+            <p class="card-desc" data-i18n="sections.s12.intro1">یکی از بخشهای ویژه خانه شیر و خورشید، معرفی و زنده نگه داشتن زبان فارسی، ادبیات، تاریخ ایران، موسیقی، هنر، سنتها، جشنهای ایرانی و میراث فرهنگی ایران است.</p>
+            <p class="card-desc" data-i18n="sections.s12.intro2">برنامههایی مانند شب ایرانی، مهرگان، نوروز، شب یلدا، شبهای موسیقی و ادبیات، سخنرانیها و نشستهای فرهنگی میتوانند در این بخش معرفی شوند.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-feather"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.persian"></p>
+            </div>
+          </div>
+        </div>
 
-        // Simple Countdown Logic (Set target date 30 days from now)
-        const targetDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
+        <!-- Section 13: Intercultural Exchange -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s13.title">فرهنگها در کنار یکدیگر</h3>
+            <p class="card-desc" data-i18n="sections.s13.intro1">خانه شیر و خورشید قرار نیست یک فضای بسته برای یک جامعه خاص باشد. هدف آن ایجاد ارتباط میان ایرانیان، اتریشیها و انسانهایی با پیشینههای مختلف است.</p>
+            <h4 class="focus-title" data-i18n="sections.s13.intro2">دو برنامهای که در پروژه نیز پیشبینی شدهاند:</h4>
+            <ul class="focus-list">
+              <li data-i18n="sections.s13.p1">«اتریش با جهان دیدار میکند»</li>
+              <li data-i18n="sections.s13.p2">«شب فرهنگی – موسیقی، ادبیات و دیدار»</li>
+            </ul>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-globe"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.intercultural"></p>
+            </div>
+          </div>
+        </div>
 
-        setInterval(() => {
-            const now = new Date().getTime();
-            const diff = targetDate - now;
+        <!-- Section 14: Volunteering -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s14.title">فعالیت داوطلبانه</h3>
+            <p class="card-desc" data-i18n="sections.s14.text1">خانه شیر و خورشید بر پایه فعالیت داوطلبانه شکل گرفته است. هدف این است که تواناییها و تخصصهای افراد داوطلب در زمینههایی مانند فرهنگ، زبان، موسیقی، آموزش، عکاسی، سلامت و مراقبت به شکلی سازمانیافته و پایدار مورد استفاده قرار گیرد. با هم میتوانیم این فضا را زنده نگه داریم.</p>
+            <p class="card-desc" data-i18n="sections.s14.text2">پروژه نیز تأکید دارد که حمایت مالی قرار نیست جایگزین فعالیت داوطلبانه شود، بلکه قرار است آن را سازماندهی و پایدارتر کند.</p>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-heart"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.volunteering"></p>
+            </div>
+          </div>
+        </div>
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        <!-- Section 15: Human Rights & Social Activities (External Link) -->
+        <div class="section-card">
+          <div class="card-content">
+            <h3 class="card-title" data-i18n="sections.s15.title">آزادی، گفتوگو و حقوق بشر</h3>
+            <p class="card-desc" data-i18n="sections.s15.text1">خانه شیر و خورشید فضایی برای گفتگو درباره آزادی، حقوق بشر و مسائل اجتماعی نیز فراهم میکند.</p>
+            <p class="card-desc text-muted" data-i18n="sections.s15.text2">این قسمت بهتر است در سایت خانه شیر و خورشید کوتاه باشد، چون سایت اصلی فعالیتهای حقوقبشری، سایت جداگانه Schild است.</p>
+            <a href="https://www.lionandsuncenter.org" target="_blank" rel="noopener noreferrer" class="btn btn-gold cta-btn" data-i18n="sections.s15.cta">اطلاعات بیشتر درباره فعالیتهای شیلد ←</a>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.humanrights"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
-            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
-            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
-        }, 1000);
+  <!-- ============================= SECTION 16: WEEKLY SCHEDULE ============================= -->
+  <section class="section section--schedule" id="schedule">
+    <div class="section-inner">
+      <div class="section-card schedule-card">
+        <div class="card-content">
+          <h2 class="card-title" data-i18n="sections.s16.title">برنامه هفتگی</h2>
+          <p class="focus-note" data-i18n="sections.s16.note">(این ساختار مستقیماً از برنامه پیشنهادی پروژه گرفته شده است.)</p>
+          
+          <div class="schedule-grid">
+            <div class="schedule-day-row">
+              <span class="day-name" data-i18n="sections.s16.d1">دوشنبه</span>
+              <span class="day-desc" data-i18n="sections.s16.d1_t">زبان آلمانی در زندگی روزمره / Sprachencafé</span>
+            </div>
+            <div class="schedule-day-row">
+              <span class="day-name" data-i18n="sections.s16.d2">سهشنبه</span>
+              <span class="day-desc" data-i18n="sections.s16.d2_t">جوان و سالمند / قهوه، گفتگو، بازی و پیادهروی</span>
+            </div>
+            <div class="schedule-day-row">
+              <span class="day-name" data-i18n="sections.s16.d3">چهارشنبه</span>
+              <span class="day-desc" data-i18n="sections.s16.d3_t">کودکان / زبان، فرهنگ و فعالیتهای خلاقانه</span>
+            </div>
+            <div class="schedule-day-row">
+              <span class="day-name" data-i18n="sections.s16.d4">پنجشنبه</span>
+              <span class="day-desc" data-i18n="sections.s16.d4_t">راهنمایی و همراهی اجتماعی</span>
+            </div>
+            <div class="schedule-day-row">
+              <span class="day-name" data-i18n="sections.s16.d5">جمعه</span>
+              <span class="day-desc" data-i18n="sections.s16.d5_t">موسیقی، هنر، عکاسی یا برنامه فرهنگی</span>
+            </div>
+            <div class="schedule-day-row">
+              <span class="day-name" data-i18n="sections.s16.d6">آخر هفته</span>
+              <span class="day-desc" data-i18n="sections.s16.d6_t">برنامههای فرهنگی، گردش و فعالیتهای بیننسلی</span>
+            </div>
+          </div>
+        </div>
+        <div class="image-placeholder">
+          <div class="placeholder-content">
+            <div class="placeholder-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+            <p class="placeholder-desc" data-i18n="placeholders.weekly"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferred_lang') || 'fa';
-            changeLanguage(savedLang);
-        });
-    </script>
+  <!-- ============================= SECTION 17: EVENTS ============================= -->
+  <section class="section section--events" id="events">
+    <div class="section-inner">
+      <div class="section-card">
+        <div class="card-content">
+          <h2 class="card-title" data-i18n="sections.s17.title">رویدادهای پیش رو</h2>
+          <p class="card-desc" data-i18n="sections.s17.text1">در این قسمت رویدادها با عکس، تاریخ و توضیح کوتاه نمایش داده شوند.</p>
+          <p class="focus-note" data-i18n="sections.s17.text2">(پروژه هدفگذاری کرده که حداقل ماهانه یک برنامه فرهنگی یا موسیقی برگزار شود.)</p>
+          <h4 class="focus-title" data-i18n="headings.sampleEvents">نمونه رویدادها:</h4>
+          <ul class="focus-list">
+            <li data-i18n="sections.s17.e1">شب ایرانی</li>
+            <li data-i18n="sections.s17.e2">جشن مهرگان</li>
+            <li data-i18n="sections.s17.e3">شب موسیقی</li>
+            <li data-i18n="sections.s17.e4">شب فرهنگی</li>
+            <li data-i18n="sections.s17.e5">سخنرانی‌ها و کارگاه‌ها</li>
+          </ul>
+        </div>
+        <div class="image-placeholder">
+          <div class="placeholder-content">
+            <div class="placeholder-icon"><i class="fa-solid fa-masks-theater"></i></div>
+            <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+            <p class="placeholder-desc" data-i18n="placeholders.eventsImg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SECTIONS 18 & 19: HOURS & CONTACT ============================= -->
+  <section class="section section--contact" id="contact">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <!-- Section 19: Contact Us -->
+        <div class="section-card forms-card">
+          <div class="card-content">
+            <h2 class="card-title" data-i18n="sections.s19.title">با ما در ارتباط باشید</h2>
+            <div class="contact-details">
+              <div class="contact-item">
+                <strong data-i18n="sections.s19.nameLabel">نام:</strong>
+                <span data-i18n="sections.s19.nameValue">Haus des Löwen und der Sonne / Vereinslokal</span>
+              </div>
+              <div class="contact-item">
+                <strong data-i18n="sections.s19.addrLabel">آدرس:</strong>
+                <span data-i18n="sections.s19.addrValue">Scherffenberggasse 5/1/R02, 1180 Wien (Waldeckgasse), Austria</span>
+              </div>
+              <div class="contact-item">
+                <strong data-i18n="sections.s19.phoneLabel">تلفن:</strong>
+                <span data-i18n="sections.s19.phoneValue">0690 104 23 511 / 0681 103 20 389</span>
+              </div>
+              <div class="contact-item">
+                <strong data-i18n="sections.s19.emailLabel">ایمیل:</strong>
+                <span data-i18n="sections.s19.emailValue">contact@lionandsuncenter.org</span>
+              </div>
+              <div class="contact-item">
+                <strong data-i18n="sections.s19.instaLabel">اینستاگرام:</strong>
+                <span data-i18n="sections.s19.instaValue">@lionandsuncenter</span>
+              </div>
+            </div>
+          </div>
+          <div class="map-container">
+            <a href="https://www.google.com/maps/place//@48.2363993,16.3279682,21z" target="_blank" rel="noopener noreferrer" aria-label="Open Google Maps location">
+              <img src="assets/img/vienna_map_location.jpg" alt="Center location map" class="contact-map-image" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Section 18: Opening Hours -->
+        <div class="section-card hours-card">
+          <div class="card-content">
+            <h2 class="card-title" data-i18n="sections.s18.title">ساعت کاری</h2>
+            <div class="hours-block">
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="sections.s18.d1">دوشنبه تا جمعه:</span>
+                <span class="hours-time" data-i18n="sections.s18.d1_t">09:00 – 20:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="sections.s18.d2">شنبه:</span>
+                <span class="hours-time" data-i18n="sections.s18.d2_t">09:00 – 16:00</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-day" data-i18n="sections.s18.d3">یکشنبه:</span>
+                <span class="hours-time" data-i18n="sections.s18.d3_t">بر اساس برنامه و رویدادهای ویژه</span>
+              </div>
+            </div>
+          </div>
+          <div class="image-placeholder">
+            <div class="placeholder-content">
+              <div class="placeholder-icon"><i class="fa-solid fa-clock"></i></div>
+              <span class="placeholder-label" data-i18n="placeholders.label">طرح و راهنمای بصری تصویر</span>
+              <p class="placeholder-desc" data-i18n="placeholders.hours"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= SECTION 20: SLOGAN & FOOTER ============================= -->
+<footer class="site-footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-col--slogan">
+      <div class="footer-slogan-block">
+        <p class="slogan-text" data-i18n="sections.s20.text1">با هم، نه تنها.</p>
+        <p class="slogan-text" data-i18n="sections.s20.text2">با یکدیگر، نه در کنار یکدیگر.</p>
+        <p class="slogan-text" data-i18n="sections.s20.text3">مشارکت به جای انزوا.</p>
+        <p class="slogan-text" data-i18n="sections.s20.text4">دیدار، پایهای برای همزیستی و ادغام.</p>
+      </div>
+    </div>
+
+    <div class="footer-col footer-col--address-wrapper">
+      <div class="footer-col--address">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+        <span data-i18n="sections.s19.addrValue">Scherffenberggasse 5/1/R02, 1180 Wien (Waldeckgasse), Austria</span>
+      </div>
+    </div>
+
+    <div class="footer-col footer-col--links">
+      <a id="emailLink" href="mailto:contact@lionandsuncenter.org">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <span>contact@lionandsuncenter.org</span>
+      </a>
+      <a id="instagramLink" href="https://instagram.com/lionandsuncenter" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        <span>lionandsuncenter</span>
+      </a>
+      <a id="whatsappLink" href="https://wa.me/436811032039" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span>0681 103 20 389</span>
+      </a>
+      <a id="phoneLink" href="tel:+436901042311">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <span>0690 104 23 511</span>
+      </a>
+    </div>
+
+    <div class="footer-col footer-col--qr">
+      <!-- Visual Placeholder for Instagram QR -->
+      <div class="image-placeholder qr-footer-placeholder">
+        <div class="placeholder-content">
+          <i class="fa-solid fa-qrcode" style="font-size: 1.25rem; color: var(--gold); margin-bottom: 0.15rem;"></i>
+          <p class="placeholder-desc" style="font-size: 0.68rem; margin: 0; max-width: 14ch;" data-i18n="placeholders.contactImg"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col footer-col--org">
+      <img src="assets/img/logo-schild.jpg" alt="Schild Royalist Association emblem" />
+      <a id="websiteLink" href="https://www.lionandsuncenter.org" target="_blank" rel="noopener noreferrer">www.lionandsuncenter.org</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="griffin griffin--left" aria-hidden="true">
+      <img src="assets/img/griffin-statue.jpg" alt="" loading="lazy" />
+    </div>
+    <p class="footer-banner-text" data-i18n="sections.s20.text1">
+      با هم، نه تنها.
+    </p>
+    <div class="griffin griffin--right" aria-hidden="true">
+      <img src="assets/img/griffin-statue.jpg" alt="" loading="lazy" />
+    </div>
+  </div>
+
+  <p class="copyright">&copy; <span id="year"></span> Lion and Sun Center — Schild Royalist Association</p>
+</footer>
+
+<button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Sidebar dot navigation -->
+<nav class="sidebar-dots" id="sidebarDots" aria-label="Sidebar navigation"></nav>
+
+<!-- Mobile quick action bar -->
+<nav class="mobile-action-bar" aria-label="Mobile quick actions">
+  <a href="tel:+436901042311" class="action-item">
+    <i class="fa-solid fa-phone"></i>
+    <span data-i18n="nav.contact">تماس</span>
+  </a>
+  <a href="https://wa.me/436811032039" target="_blank" rel="noopener noreferrer" class="action-item">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+  <a href="#schedule" class="action-item">
+    <i class="fa-solid fa-calendar-day"></i>
+    <span data-i18n="nav.schedule">برنامه</span>
+  </a>
+  <a href="#contact" class="action-item">
+    <i class="fa-solid fa-map-location-dot"></i>
+    <span data-i18n="nav.about">آدرس</span>
+  </a>
+</nav>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
-
