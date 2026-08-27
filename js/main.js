@@ -338,6 +338,32 @@
   }
 
   /* ---------------------------------------------------------------- */
+  /* Scroll Reveal Animations                                         */
+  /* ---------------------------------------------------------------- */
+
+  function initScrollReveal() {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    if (!revealElements.length) return;
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px 0px -12% 0px", // triggers slightly before entering viewport
+      threshold: 0.05
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+          observer.unobserve(entry.target); // trigger animation only once
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach((el) => observer.observe(el));
+  }
+
+  /* ---------------------------------------------------------------- */
   /* Init                                                               */
   /* ---------------------------------------------------------------- */
 
@@ -357,5 +383,6 @@
     initBackToTop();
     initProgressBar();
     initStickyHeader();
+    initScrollReveal();
   });
 })();
