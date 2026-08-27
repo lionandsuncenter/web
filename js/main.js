@@ -13,8 +13,8 @@
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "lionandsun-lang";
-  const DEFAULT_LANG = "fa";
+  const STORAGE_KEY = "lionandsun-lang-v3";
+  const DEFAULT_LANG = "de";
   const SUPPORTED_LANGS = Object.keys(SITE_CONTENT);
 
   /** Resolve a dot-path like "hero.title" against an object. */
@@ -87,11 +87,25 @@
   }
 
   function setActiveLangButton(lang) {
-    document.querySelectorAll(".lang-btn").forEach((btn) => {
+    // Update the active state of buttons inside the dropdown list
+    document.querySelectorAll(".lang-dropdown-list .lang-btn").forEach((btn) => {
       const isActive = btn.getAttribute("data-lang") === lang;
       btn.classList.toggle("is-active", isActive);
       btn.setAttribute("aria-pressed", String(isActive));
     });
+
+    // Update the top-level active button text for mobile view
+    const activeBtn = document.getElementById("activeLangBtn");
+    if (activeBtn) {
+      activeBtn.setAttribute("data-lang", lang);
+      activeBtn.textContent = lang === "fa" ? "فا" : lang.toUpperCase();
+    }
+
+    // Close the dropdown container on change
+    const switchContainer = document.getElementById("langSwitch");
+    if (switchContainer) {
+      switchContainer.classList.remove("is-open");
+    }
   }
 
   function applyLanguage(lang) {
@@ -130,12 +144,36 @@
   /* ---------------------------------------------------------------- */
 
   function initLangSwitch() {
-    document.querySelectorAll(".lang-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
+    // Handle standard list buttons click to switch language
+    document.querySelectorAll(".lang-dropdown-list .lang-btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent triggering the container click toggle
         const lang = btn.getAttribute("data-lang");
-        if (lang) applyLanguage(lang);
+        if (lang) {
+          applyLanguage(lang);
+        }
       });
     });
+
+    // Handle mobile dropdown container toggle behavior
+    const switchContainer = document.getElementById("langSwitch");
+    if (switchContainer) {
+      switchContainer.addEventListener("click", (e) => {
+        if (window.innerWidth <= 820) {
+          const dropdownList = document.getElementById("langDropdownList");
+          if (!dropdownList.contains(e.target) || e.target === switchContainer || e.target.id === "activeLangBtn") {
+            switchContainer.classList.toggle("is-open");
+          }
+        }
+      });
+
+      // Close the dropdown list if clicked outside the language switch container
+      document.addEventListener("click", (e) => {
+        if (!switchContainer.contains(e.target)) {
+          switchContainer.classList.remove("is-open");
+        }
+      });
+    }
   }
 
   /* ---------------------------------------------------------------- */

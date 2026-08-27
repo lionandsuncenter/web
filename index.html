@@ -3,14 +3,14 @@
   GitHub: https://github.com/xsadra
 -->
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="de" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>خانه شیر و خورشید | خانه فرهنگ، دیدار، آموزش و همبستگی</title>
+  <title>Haus des Löwen und der Sonne | Haus für Kultur, Begegnung, Bildung & Solidarität</title>
   <meta name="description"
-    content="خانه شیر و خورشید در وین، محلی باز برای دیدار، فرهنگ، آموزش و فعالیت‌های اجتماعی داوطلبانه."
+    content="Haus des Löwen und der Sonne in Wien - ein offener Raum für Begegnung, Kultur, Bildung und soziales ehrenamtliches Engagement."
     data-i18n-attr="content:meta.description" />
   <meta name="author" content="Sadra Babai (github.com/xsadra)" />
 
@@ -91,15 +91,18 @@
       </nav>
 
       <div class="header-actions">
-        <div class="lang-switch" role="group" aria-label="Language switcher">
-          <button type="button" class="lang-btn is-active" data-lang="fa" aria-pressed="true">فا</button>
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-          <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
-        </div>
         <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="main-nav"
           aria-label="Toggle navigation menu">
           <span></span><span></span><span></span>
         </button>
+        <div class="lang-switch" role="group" aria-label="Language switcher" id="langSwitch">
+          <button type="button" class="lang-btn" id="activeLangBtn">DE</button>
+          <div class="lang-dropdown-list" id="langDropdownList">
+            <button type="button" class="lang-btn" data-lang="fa" aria-pressed="false">فا</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-btn is-active" data-lang="de" aria-pressed="true">DE</button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="progress-bar-container">
@@ -654,7 +657,7 @@
               </div>
             </div>
             <div class="map-container">
-              <a href="https://www.google.com/maps/place//@48.2363993,16.3279682,21z" target="_blank"
+              <a href="https://www.google.com/maps/search/?api=1&query=48.2363993,16.3279682" target="_blank"
                 rel="noopener noreferrer" aria-label="Open Google Maps location">
                 <img src="assets/img/vienna_map_location.jpg" alt="Center location map" class="contact-map-image" />
               </a>
@@ -784,8 +787,8 @@
     </a>
   </nav>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/i18n.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 
 </html>
