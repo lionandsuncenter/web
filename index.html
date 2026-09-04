@@ -64,7 +64,7 @@
     referrerpolicy="no-referrer" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
 </head>
 
 <body id="top">
@@ -76,8 +76,11 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Lion and Sun Center">
-        <img src="assets/img/logo-lion-sun.jpg?v=1" alt="Lion and Sun Center emblem" class="brand-emblem" width="52"
-          height="52" />
+        <picture>
+          <source type="image/avif" srcset="assets/img/optimized/logo-lion-sun-480.avif" />
+          <source type="image/webp" srcset="assets/img/optimized/logo-lion-sun-480.webp" />
+          <img src="assets/img/optimized/logo-lion-sun-480.jpg" alt="Lion and Sun Center emblem" class="brand-emblem" width="52" height="52" loading="eager" fetchpriority="high" />
+        </picture>
         <span class="brand-name" data-i18n="sections.s1.title">خانه شیر و خورشید</span>
       </a>
 
@@ -115,7 +118,11 @@
     <!-- ============================= SECTION 1: HERO ============================= -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-bg" aria-hidden="true">
-        <img src="assets/img/library.jpg" alt="" loading="eager" />
+        <picture>
+          <source type="image/avif" srcset="assets/img/optimized/library-480.avif 480w, assets/img/optimized/library-800.avif 800w, assets/img/optimized/library-1200.avif 1200w" sizes="100vw" />
+          <source type="image/webp" srcset="assets/img/optimized/library-480.webp 480w, assets/img/optimized/library-800.webp 800w, assets/img/optimized/library-1200.webp 1200w" sizes="100vw" />
+          <img src="assets/img/optimized/library-1200.jpg" alt="" loading="eager" fetchpriority="high" width="1400" height="1103" />
+        </picture>
         <div class="hero-bg-scrim"></div>
       </div>
 
@@ -124,7 +131,11 @@
           <p class="hero-eyebrow" data-i18n="sections.s1.subtitle">فرهنگ · دیدار · آموزش · همبستگی</p>
           <div class="hero-emblem">
             <div class="hero-emblem-glow" aria-hidden="true"></div>
-            <img src="assets/img/logo-lion-sun.jpg" alt="Lion and Sun emblem" />
+            <picture>
+              <source type="image/avif" srcset="assets/img/optimized/logo-lion-sun-480.avif 480w, assets/img/optimized/logo-lion-sun-800.avif 800w" sizes="(max-width: 600px) 140px, 180px" />
+              <source type="image/webp" srcset="assets/img/optimized/logo-lion-sun-480.webp 480w, assets/img/optimized/logo-lion-sun-800.webp 800w" sizes="(max-width: 600px) 140px, 180px" />
+              <img src="assets/img/optimized/logo-lion-sun-800.jpg" alt="Lion and Sun emblem" width="180" height="180" loading="eager" fetchpriority="high" />
+            </picture>
           </div>
           <h1 id="hero-title" data-i18n="sections.s1.title">خانه شیر و خورشید</h1>
           <p class="hero-subtitle" data-i18n="sections.s1.intro1">مکانی باز برای انسانهایی با پیشینه‌ها و نسلهای
@@ -174,8 +185,33 @@
 
           <!-- About Center Image -->
           <div class="card-media">
-            <img src="assets/img/about-center.jpeg" alt="خانه شیر و خورشید چیست؟" data-i18n-attr="alt:sections.s2.title" loading="lazy" width="2752" height="1536" />
-          </div>
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/about-center-480.avif 480w,
+                          assets/img/optimized/about-center-800.avif 800w,
+                          assets/img/optimized/about-center-1200.avif 1200w,
+                          assets/img/optimized/about-center-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/about-center-480.webp 480w,
+                          assets/img/optimized/about-center-800.webp 800w,
+                          assets/img/optimized/about-center-1200.webp 1200w,
+                          assets/img/optimized/about-center-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/about-center-1200.jpg"
+                  srcset="assets/img/optimized/about-center-480.jpg 480w,
+                          assets/img/optimized/about-center-800.jpg 800w,
+                          assets/img/optimized/about-center-1200.jpg 1200w,
+                          assets/img/optimized/about-center-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="خانه شیر و خورشید چیست؟"
+                  data-i18n-attr="alt:sections.s2.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
+            </div>
         </div>
       </div>
     </section>
@@ -206,7 +242,32 @@
                 فضای دوستانه برای گفتگو، آشنایی و ارتباط میان افراد است.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/cafe-dialogue.jpeg" alt="کافه و محل گردهمایی" data-i18n-attr="alt:sections.s3.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/cafe-dialogue-480.avif 480w,
+                          assets/img/optimized/cafe-dialogue-800.avif 800w,
+                          assets/img/optimized/cafe-dialogue-1200.avif 1200w,
+                          assets/img/optimized/cafe-dialogue-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/cafe-dialogue-480.webp 480w,
+                          assets/img/optimized/cafe-dialogue-800.webp 800w,
+                          assets/img/optimized/cafe-dialogue-1200.webp 1200w,
+                          assets/img/optimized/cafe-dialogue-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/cafe-dialogue-1200.jpg"
+                  srcset="assets/img/optimized/cafe-dialogue-480.jpg 480w,
+                          assets/img/optimized/cafe-dialogue-800.jpg 800w,
+                          assets/img/optimized/cafe-dialogue-1200.jpg 1200w,
+                          assets/img/optimized/cafe-dialogue-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="کافه و محل گردهمایی"
+                  data-i18n-attr="alt:sections.s3.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -227,7 +288,32 @@
                 ایرانی و همچنین گفتگو و تبادل نظر باشد.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/library-reading.jpeg" alt="کتابخانه و مطالعه" data-i18n-attr="alt:sections.s4.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/library-reading-480.avif 480w,
+                          assets/img/optimized/library-reading-800.avif 800w,
+                          assets/img/optimized/library-reading-1200.avif 1200w,
+                          assets/img/optimized/library-reading-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/library-reading-480.webp 480w,
+                          assets/img/optimized/library-reading-800.webp 800w,
+                          assets/img/optimized/library-reading-1200.webp 1200w,
+                          assets/img/optimized/library-reading-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/library-reading-1200.jpg"
+                  srcset="assets/img/optimized/library-reading-480.jpg 480w,
+                          assets/img/optimized/library-reading-800.jpg 800w,
+                          assets/img/optimized/library-reading-1200.jpg 1200w,
+                          assets/img/optimized/library-reading-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="کتابخانه و مطالعه"
+                  data-i18n-attr="alt:sections.s4.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
         </div>
@@ -267,7 +353,32 @@
               </ul>
             </div>
             <div class="card-media">
-              <img src="assets/img/language-learning.jpeg" alt="آموزش و یادگیری زبان" data-i18n-attr="alt:sections.s5.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/language-learning-480.avif 480w,
+                          assets/img/optimized/language-learning-800.avif 800w,
+                          assets/img/optimized/language-learning-1200.avif 1200w,
+                          assets/img/optimized/language-learning-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/language-learning-480.webp 480w,
+                          assets/img/optimized/language-learning-800.webp 800w,
+                          assets/img/optimized/language-learning-1200.webp 1200w,
+                          assets/img/optimized/language-learning-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/language-learning-1200.jpg"
+                  srcset="assets/img/optimized/language-learning-480.jpg 480w,
+                          assets/img/optimized/language-learning-800.jpg 800w,
+                          assets/img/optimized/language-learning-1200.jpg 1200w,
+                          assets/img/optimized/language-learning-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="آموزش و یادگیری زبان"
+                  data-i18n-attr="alt:sections.s5.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -291,7 +402,32 @@
               </ul>
             </div>
             <div class="card-media">
-              <img src="assets/img/children-creativity.jpeg" alt="کودکان و چندزبانگی" data-i18n-attr="alt:sections.s6.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/children-creativity-480.avif 480w,
+                          assets/img/optimized/children-creativity-800.avif 800w,
+                          assets/img/optimized/children-creativity-1200.avif 1200w,
+                          assets/img/optimized/children-creativity-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/children-creativity-480.webp 480w,
+                          assets/img/optimized/children-creativity-800.webp 800w,
+                          assets/img/optimized/children-creativity-1200.webp 1200w,
+                          assets/img/optimized/children-creativity-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/children-creativity-1200.jpg"
+                  srcset="assets/img/optimized/children-creativity-480.jpg 480w,
+                          assets/img/optimized/children-creativity-800.jpg 800w,
+                          assets/img/optimized/children-creativity-1200.jpg 1200w,
+                          assets/img/optimized/children-creativity-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="کودکان و چندزبانگی"
+                  data-i18n-attr="alt:sections.s6.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -315,7 +451,32 @@
               </ul>
             </div>
             <div class="card-media">
-              <img src="assets/img/intergenerational-bond.jpeg" alt="جوان و سالمند – با هم، نه تنها" data-i18n-attr="alt:sections.s7.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/intergenerational-bond-480.avif 480w,
+                          assets/img/optimized/intergenerational-bond-800.avif 800w,
+                          assets/img/optimized/intergenerational-bond-1200.avif 1200w,
+                          assets/img/optimized/intergenerational-bond-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/intergenerational-bond-480.webp 480w,
+                          assets/img/optimized/intergenerational-bond-800.webp 800w,
+                          assets/img/optimized/intergenerational-bond-1200.webp 1200w,
+                          assets/img/optimized/intergenerational-bond-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/intergenerational-bond-1200.jpg"
+                  srcset="assets/img/optimized/intergenerational-bond-480.jpg 480w,
+                          assets/img/optimized/intergenerational-bond-800.jpg 800w,
+                          assets/img/optimized/intergenerational-bond-1200.jpg 1200w,
+                          assets/img/optimized/intergenerational-bond-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="جوان و سالمند – با هم، نه تنها"
+                  data-i18n-attr="alt:sections.s7.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -336,7 +497,32 @@
               </ul>
             </div>
             <div class="card-media">
-              <img src="assets/img/music-art.jpeg" alt="موسیقی، هنر و خلاقیت" data-i18n-attr="alt:sections.s8.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/music-art-480.avif 480w,
+                          assets/img/optimized/music-art-800.avif 800w,
+                          assets/img/optimized/music-art-1200.avif 1200w,
+                          assets/img/optimized/music-art-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/music-art-480.webp 480w,
+                          assets/img/optimized/music-art-800.webp 800w,
+                          assets/img/optimized/music-art-1200.webp 1200w,
+                          assets/img/optimized/music-art-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/music-art-1200.jpg"
+                  srcset="assets/img/optimized/music-art-480.jpg 480w,
+                          assets/img/optimized/music-art-800.jpg 800w,
+                          assets/img/optimized/music-art-1200.jpg 1200w,
+                          assets/img/optimized/music-art-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="موسیقی، هنر و خلاقیت"
+                  data-i18n-attr="alt:sections.s8.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -358,7 +544,32 @@
                 پرستاری و مشاوره را نیز پیشبینی کرده است.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/health-wellbeing.jpeg" alt="سلامت و راهنمایی اجتماعی" data-i18n-attr="alt:sections.s9.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/health-wellbeing-480.avif 480w,
+                          assets/img/optimized/health-wellbeing-800.avif 800w,
+                          assets/img/optimized/health-wellbeing-1200.avif 1200w,
+                          assets/img/optimized/health-wellbeing-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/health-wellbeing-480.webp 480w,
+                          assets/img/optimized/health-wellbeing-800.webp 800w,
+                          assets/img/optimized/health-wellbeing-1200.webp 1200w,
+                          assets/img/optimized/health-wellbeing-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/health-wellbeing-1200.jpg"
+                  srcset="assets/img/optimized/health-wellbeing-480.jpg 480w,
+                          assets/img/optimized/health-wellbeing-800.jpg 800w,
+                          assets/img/optimized/health-wellbeing-1200.jpg 1200w,
+                          assets/img/optimized/health-wellbeing-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="سلامت و راهنمایی اجتماعی"
+                  data-i18n-attr="alt:sections.s9.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -384,7 +595,32 @@
                 میشوند.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/social-support.jpeg" alt="راهنمایی و همراهی اجتماعی" data-i18n-attr="alt:sections.s10.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/social-support-480.avif 480w,
+                          assets/img/optimized/social-support-800.avif 800w,
+                          assets/img/optimized/social-support-1200.avif 1200w,
+                          assets/img/optimized/social-support-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/social-support-480.webp 480w,
+                          assets/img/optimized/social-support-800.webp 800w,
+                          assets/img/optimized/social-support-1200.webp 1200w,
+                          assets/img/optimized/social-support-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/social-support-1200.jpg"
+                  srcset="assets/img/optimized/social-support-480.jpg 480w,
+                          assets/img/optimized/social-support-800.jpg 800w,
+                          assets/img/optimized/social-support-1200.jpg 1200w,
+                          assets/img/optimized/social-support-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="راهنمایی و همراهی اجتماعی"
+                  data-i18n-attr="alt:sections.s10.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
         </div>
@@ -422,7 +658,32 @@
                 افراد و فرهنگهای دیگر را داشته باشند.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/discover-austria.jpeg" alt="اتریش را بشناسیم" data-i18n-attr="alt:sections.s11.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/discover-austria-480.avif 480w,
+                          assets/img/optimized/discover-austria-800.avif 800w,
+                          assets/img/optimized/discover-austria-1200.avif 1200w,
+                          assets/img/optimized/discover-austria-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/discover-austria-480.webp 480w,
+                          assets/img/optimized/discover-austria-800.webp 800w,
+                          assets/img/optimized/discover-austria-1200.webp 1200w,
+                          assets/img/optimized/discover-austria-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/discover-austria-1200.jpg"
+                  srcset="assets/img/optimized/discover-austria-480.jpg 480w,
+                          assets/img/optimized/discover-austria-800.jpg 800w,
+                          assets/img/optimized/discover-austria-1200.jpg 1200w,
+                          assets/img/optimized/discover-austria-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="اتریش را بشناسیم"
+                  data-i18n-attr="alt:sections.s11.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -437,7 +698,32 @@
                 شبهای موسیقی و ادبیات، سخنرانیها و نشستهای فرهنگی میتوانند در این بخش معرفی شوند.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/persian-heritage.jpeg" alt="فرهنگ، تاریخ و میراث ایران" data-i18n-attr="alt:sections.s12.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/persian-heritage-480.avif 480w,
+                          assets/img/optimized/persian-heritage-800.avif 800w,
+                          assets/img/optimized/persian-heritage-1200.avif 1200w,
+                          assets/img/optimized/persian-heritage-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/persian-heritage-480.webp 480w,
+                          assets/img/optimized/persian-heritage-800.webp 800w,
+                          assets/img/optimized/persian-heritage-1200.webp 1200w,
+                          assets/img/optimized/persian-heritage-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/persian-heritage-1200.jpg"
+                  srcset="assets/img/optimized/persian-heritage-480.jpg 480w,
+                          assets/img/optimized/persian-heritage-800.jpg 800w,
+                          assets/img/optimized/persian-heritage-1200.jpg 1200w,
+                          assets/img/optimized/persian-heritage-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="فرهنگ، تاریخ و میراث ایران"
+                  data-i18n-attr="alt:sections.s12.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -454,7 +740,32 @@
               </ul>
             </div>
             <div class="card-media">
-              <img src="assets/img/intercultural-dialogue.jpeg" alt="فرهنگها در کنار یکدیگر" data-i18n-attr="alt:sections.s13.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/intercultural-dialogue-480.avif 480w,
+                          assets/img/optimized/intercultural-dialogue-800.avif 800w,
+                          assets/img/optimized/intercultural-dialogue-1200.avif 1200w,
+                          assets/img/optimized/intercultural-dialogue-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/intercultural-dialogue-480.webp 480w,
+                          assets/img/optimized/intercultural-dialogue-800.webp 800w,
+                          assets/img/optimized/intercultural-dialogue-1200.webp 1200w,
+                          assets/img/optimized/intercultural-dialogue-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/intercultural-dialogue-1200.jpg"
+                  srcset="assets/img/optimized/intercultural-dialogue-480.jpg 480w,
+                          assets/img/optimized/intercultural-dialogue-800.jpg 800w,
+                          assets/img/optimized/intercultural-dialogue-1200.jpg 1200w,
+                          assets/img/optimized/intercultural-dialogue-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="فرهنگها در کنار یکدیگر"
+                  data-i18n-attr="alt:sections.s13.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -470,7 +781,32 @@
                 فعالیت داوطلبانه شود، بلکه قرار است آن را سازماندهی و پایدارتر کند.</p>
             </div>
             <div class="card-media">
-              <img src="assets/img/volunteering-action.jpeg" alt="فعالیت داوطلبانه" data-i18n-attr="alt:sections.s14.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/volunteering-action-480.avif 480w,
+                          assets/img/optimized/volunteering-action-800.avif 800w,
+                          assets/img/optimized/volunteering-action-1200.avif 1200w,
+                          assets/img/optimized/volunteering-action-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/volunteering-action-480.webp 480w,
+                          assets/img/optimized/volunteering-action-800.webp 800w,
+                          assets/img/optimized/volunteering-action-1200.webp 1200w,
+                          assets/img/optimized/volunteering-action-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/volunteering-action-1200.jpg"
+                  srcset="assets/img/optimized/volunteering-action-480.jpg 480w,
+                          assets/img/optimized/volunteering-action-800.jpg 800w,
+                          assets/img/optimized/volunteering-action-1200.jpg 1200w,
+                          assets/img/optimized/volunteering-action-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="فعالیت داوطلبانه"
+                  data-i18n-attr="alt:sections.s14.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
 
@@ -486,7 +822,32 @@
                 data-i18n="sections.s15.cta">اطلاعات بیشتر درباره فعالیت‌های شیلد ←</a>
             </div>
             <div class="card-media">
-              <img src="assets/img/human-rights-solidarity.jpeg" alt="آزادی، گفتگو و حقوق بشر" data-i18n-attr="alt:sections.s15.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/human-rights-solidarity-480.avif 480w,
+                          assets/img/optimized/human-rights-solidarity-800.avif 800w,
+                          assets/img/optimized/human-rights-solidarity-1200.avif 1200w,
+                          assets/img/optimized/human-rights-solidarity-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/human-rights-solidarity-480.webp 480w,
+                          assets/img/optimized/human-rights-solidarity-800.webp 800w,
+                          assets/img/optimized/human-rights-solidarity-1200.webp 1200w,
+                          assets/img/optimized/human-rights-solidarity-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/human-rights-solidarity-1200.jpg"
+                  srcset="assets/img/optimized/human-rights-solidarity-480.jpg 480w,
+                          assets/img/optimized/human-rights-solidarity-800.jpg 800w,
+                          assets/img/optimized/human-rights-solidarity-1200.jpg 1200w,
+                          assets/img/optimized/human-rights-solidarity-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="آزادی، گفتگو و حقوق بشر"
+                  data-i18n-attr="alt:sections.s15.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
         </div>
@@ -530,8 +891,33 @@
             </div>
           </div>
           <div class="card-media">
-            <img src="assets/img/schedule-overview.jpeg" alt="برنامه هفتگی" data-i18n-attr="alt:sections.s16.title" loading="lazy" width="2752" height="1536" />
-          </div>
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/schedule-overview-480.avif 480w,
+                          assets/img/optimized/schedule-overview-800.avif 800w,
+                          assets/img/optimized/schedule-overview-1200.avif 1200w,
+                          assets/img/optimized/schedule-overview-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/schedule-overview-480.webp 480w,
+                          assets/img/optimized/schedule-overview-800.webp 800w,
+                          assets/img/optimized/schedule-overview-1200.webp 1200w,
+                          assets/img/optimized/schedule-overview-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/schedule-overview-1200.jpg"
+                  srcset="assets/img/optimized/schedule-overview-480.jpg 480w,
+                          assets/img/optimized/schedule-overview-800.jpg 800w,
+                          assets/img/optimized/schedule-overview-1200.jpg 1200w,
+                          assets/img/optimized/schedule-overview-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="برنامه هفتگی"
+                  data-i18n-attr="alt:sections.s16.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
+            </div>
         </div>
       </div>
     </section>
@@ -556,8 +942,33 @@
             </ul>
           </div>
           <div class="card-media">
-            <img src="assets/img/events-showcase.jpeg" alt="رویدادهای پیش رو" data-i18n-attr="alt:sections.s17.title" loading="lazy" width="1376" height="768" />
-          </div>
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/events-showcase-480.avif 480w,
+                          assets/img/optimized/events-showcase-800.avif 800w,
+                          assets/img/optimized/events-showcase-1200.avif 1200w,
+                          assets/img/optimized/events-showcase-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/events-showcase-480.webp 480w,
+                          assets/img/optimized/events-showcase-800.webp 800w,
+                          assets/img/optimized/events-showcase-1200.webp 1200w,
+                          assets/img/optimized/events-showcase-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/events-showcase-1200.jpg"
+                  srcset="assets/img/optimized/events-showcase-480.jpg 480w,
+                          assets/img/optimized/events-showcase-800.jpg 800w,
+                          assets/img/optimized/events-showcase-1200.jpg 1200w,
+                          assets/img/optimized/events-showcase-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="رویدادهای پیش رو"
+                  data-i18n-attr="alt:sections.s17.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="1376"
+                  height="768" />
+              </picture>
+            </div>
         </div>
       </div>
     </section>
@@ -603,7 +1014,11 @@
             <div class="map-container">
               <a href="https://www.google.com/maps/search/?api=1&query=48.2363993,16.3279682" target="_blank"
                 rel="noopener noreferrer" aria-label="Open Google Maps location">
-                <img src="assets/img/vienna_map_location.jpg" alt="Center location map" class="contact-map-image" />
+                <picture>
+                  <source type="image/avif" srcset="assets/img/optimized/vienna_map_location-480.avif 480w, assets/img/optimized/vienna_map_location-800.avif 800w, assets/img/optimized/vienna_map_location-1200.avif 1200w" sizes="(max-width: 820px) 100vw, 560px" />
+                  <source type="image/webp" srcset="assets/img/optimized/vienna_map_location-480.webp 480w, assets/img/optimized/vienna_map_location-800.webp 800w, assets/img/optimized/vienna_map_location-1200.webp 1200w" sizes="(max-width: 820px) 100vw, 560px" />
+                  <img src="assets/img/optimized/vienna_map_location-800.jpg" alt="Center location map" class="contact-map-image" loading="lazy" decoding="async" width="1024" height="1024" />
+                </picture>
               </a>
             </div>
           </div>
@@ -628,7 +1043,32 @@
               </div>
             </div>
             <div class="card-media">
-              <img src="assets/img/opening-hours-welcome.jpeg" alt="ساعت کاری" data-i18n-attr="alt:sections.s18.title" loading="lazy" width="2752" height="1536" />
+              <picture>
+                <source type="image/avif"
+                  srcset="assets/img/optimized/opening-hours-welcome-480.avif 480w,
+                          assets/img/optimized/opening-hours-welcome-800.avif 800w,
+                          assets/img/optimized/opening-hours-welcome-1200.avif 1200w,
+                          assets/img/optimized/opening-hours-welcome-1600.avif 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <source type="image/webp"
+                  srcset="assets/img/optimized/opening-hours-welcome-480.webp 480w,
+                          assets/img/optimized/opening-hours-welcome-800.webp 800w,
+                          assets/img/optimized/opening-hours-welcome-1200.webp 1200w,
+                          assets/img/optimized/opening-hours-welcome-1600.webp 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px" />
+                <img src="assets/img/optimized/opening-hours-welcome-1200.jpg"
+                  srcset="assets/img/optimized/opening-hours-welcome-480.jpg 480w,
+                          assets/img/optimized/opening-hours-welcome-800.jpg 800w,
+                          assets/img/optimized/opening-hours-welcome-1200.jpg 1200w,
+                          assets/img/optimized/opening-hours-welcome-1600.jpg 1600w"
+                  sizes="(max-width: 820px) 100vw, 560px"
+                  alt="ساعت کاری"
+                  data-i18n-attr="alt:sections.s18.title"
+                  loading="lazy"
+                  decoding="async"
+                  width="2752"
+                  height="1536" />
+              </picture>
             </div>
           </div>
         </div>
@@ -687,7 +1127,11 @@
       <div class="footer-col footer-col--org">
         <a href="https://schildiran.com/" target="_blank" rel="noopener noreferrer"
           aria-label="Schild Royalist Association website">
-          <img src="assets/img/logo-schild.jpg" alt="Schild Royalist Association emblem" />
+          <picture>
+            <source type="image/avif" srcset="assets/img/optimized/logo-schild-480.avif 480w, assets/img/optimized/logo-schild-800.avif 800w" sizes="200px" />
+            <source type="image/webp" srcset="assets/img/optimized/logo-schild-480.webp 480w, assets/img/optimized/logo-schild-800.webp 800w" sizes="200px" />
+            <img src="assets/img/optimized/logo-schild-480.jpg" alt="Schild Royalist Association emblem" loading="lazy" decoding="async" width="700" height="205" />
+          </picture>
         </a>
         <a id="websiteLink" href="https://schildiran.com" target="_blank" rel="noopener noreferrer">schildiran.com</a>
       </div>
