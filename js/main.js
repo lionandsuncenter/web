@@ -402,29 +402,102 @@
   }
 
   /* ---------------------------------------------------------------- */
-  /* Scroll Reveal Animations                                         */
+  /* ---------------------------------------------------------------- */
+  /* Scroll Reveal & Background Parallax Engine                        */
   /* ---------------------------------------------------------------- */
 
   function initScrollReveal() {
+    // 1. Regular element reveals (trigger once and remain visible)
     const revealElements = document.querySelectorAll(".scroll-reveal");
-    if (!revealElements.length) return;
+    if (revealElements.length) {
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.05
+      };
 
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px 0px -12% 0px", // triggers slightly before entering viewport
-      threshold: 0.05
-    };
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-active");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("reveal-active");
-          observer.unobserve(entry.target); // trigger animation only once
+      revealElements.forEach((el) => revealObserver.observe(el));
+    }
+
+    // 2. Background Portal smooth fade-in/out and GPU-accelerated Parallax
+    const bgContainers = document.querySelectorAll(".section-with-bg, .activity-cluster, .section-group");
+    if (bgContainers.length) {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const visibleBgContainers = new Set();
+      let isTicking = false;
+
+      function renderParallax() {
+        if (prefersReducedMotion) {
+          isTicking = false;
+          return;
         }
-      });
-    }, observerOptions);
 
-    revealElements.forEach((el) => observer.observe(el));
+        const viewportHeight = window.innerHeight;
+        const viewportCenter = viewportHeight / 2;
+
+        visibleBgContainers.forEach((container) => {
+          const img = container.querySelector(".section-bg img");
+          if (!img) return;
+
+          const rect = container.getBoundingClientRect();
+          const containerCenter = rect.top + rect.height / 2;
+          // Distance from the vertical center of the viewport
+          const distanceFromCenter = containerCenter - viewportCenter;
+          // 0.18 speed multiplier: shifts the image smoothly in the opposite direction
+          // of scroll displacement so the background scrolls noticeably slower than content!
+          const translateY = distanceFromCenter * 0.18;
+
+          img.style.transform = `translate3d(0, ${translateY.toFixed(1)}px, 0)`;
+        });
+
+        isTicking = false;
+      }
+
+      function onScroll() {
+        if (!isTicking) {
+          window.requestAnimationFrame(renderParallax);
+          isTicking = true;
+        }
+      }
+
+      const bgObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const bg = entry.target.querySelector(".section-bg");
+          if (entry.isIntersecting) {
+            if (bg) bg.classList.add("is-visible");
+            visibleBgContainers.add(entry.target);
+            if (!isTicking) {
+              window.requestAnimationFrame(renderParallax);
+              isTicking = true;
+            }
+          } else {
+            if (bg) bg.classList.remove("is-visible");
+            visibleBgContainers.delete(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: "120px 0px 120px 0px",
+        threshold: 0.01
+      });
+
+      bgContainers.forEach((el) => bgObserver.observe(el));
+
+      if (!prefersReducedMotion) {
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true });
+        window.requestAnimationFrame(renderParallax);
+      }
+    }
   }
 
   /* ---------------------------------------------------------------- */
