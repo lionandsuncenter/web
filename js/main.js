@@ -44,16 +44,23 @@
   /* Rendering                                                         */
   /* ---------------------------------------------------------------- */
 
+  function decodeValue(val) {
+    if (typeof val === "string" && val.startsWith("b64:")) {
+      return atob(val.substring(4));
+    }
+    return val;
+  }
+
   function renderStaticText(content) {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const value = resolvePath(content, el.getAttribute("data-i18n"));
-      if (value !== null) el.textContent = value;
+      if (value !== null) el.textContent = decodeValue(value);
     });
 
     document.querySelectorAll("[data-i18n-attr]").forEach((el) => {
       const [attr, path] = el.getAttribute("data-i18n-attr").split(":");
       const value = resolvePath(content, path);
-      if (value !== null) el.setAttribute(attr, value);
+      if (value !== null) el.setAttribute(attr, decodeValue(value));
     });
   }
 
@@ -72,18 +79,35 @@
     const waLink = document.getElementById("whatsappLink");
     const phoneLink = document.getElementById("phoneLink");
     const websiteLink = document.getElementById("websiteLink");
+    const mobilePhoneLink = document.getElementById("mobilePhoneLink");
+    const mobileWhatsappLink = document.getElementById("mobileWhatsappLink");
 
-    if (emailLink) emailLink.href = `mailto:${SITE_CONSTANTS.email}`;
+    const email = decodeValue(SITE_CONSTANTS.email);
+    const whatsapp = decodeValue(SITE_CONSTANTS.whatsapp);
+    const whatsappUrl = decodeValue(SITE_CONSTANTS.whatsappUrl);
+    const phone = decodeValue(SITE_CONSTANTS.phone);
+    const phoneUrl = decodeValue(SITE_CONSTANTS.phoneUrl);
+
+    if (emailLink) {
+      emailLink.href = `mailto:${email}`;
+      const span = emailLink.querySelector("span");
+      if (span) span.textContent = email;
+    }
     if (instaLink) instaLink.href = SITE_CONSTANTS.instagramUrl;
     if (waLink) {
-      waLink.href = SITE_CONSTANTS.whatsappUrl;
-      waLink.querySelector("span").textContent = SITE_CONSTANTS.whatsapp;
+      waLink.href = whatsappUrl;
+      const span = waLink.querySelector("span");
+      if (span) span.textContent = whatsapp;
     }
     if (phoneLink) {
-      phoneLink.href = SITE_CONSTANTS.phoneUrl;
-      phoneLink.querySelector("span").textContent = SITE_CONSTANTS.phone;
+      phoneLink.href = phoneUrl;
+      const span = phoneLink.querySelector("span");
+      if (span) span.textContent = phone;
     }
     if (websiteLink) websiteLink.href = SITE_CONSTANTS.website;
+
+    if (mobilePhoneLink) mobilePhoneLink.href = phoneUrl;
+    if (mobileWhatsappLink) mobileWhatsappLink.href = whatsappUrl;
   }
 
   function setActiveLangButton(lang) {

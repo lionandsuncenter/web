@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Haus des Löwen und der Sonne | خانه شیر و خورشید
+ORG:Haus des Löwen und der Sonne | خانه شیر و خورشید
+N:;Haus des Löwen und der Sonne | خانه شیر و خورشید;;;
+EMAIL;TYPE=INTERNET,WORK:contact@lionandsuncenter.org
+TEL;TYPE=CELL,VOICE:+436901042311
+TEL;TYPE=WORK,VOICE:+436811032039
+ADR;TYPE=WORK:;;Scherffenberggasse 5/1/R02;Wien;;1180;Austria
+URL:https://www.lionandsuncenter.org
+X-ABShowAs:COMPANY
+END:VCARD

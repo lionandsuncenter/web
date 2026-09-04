@@ -21,7 +21,10 @@ const SITE_CONTENT = {
       activities: "فعالیت‌ها و خدمات",
       schedule: "برنامه هفتگی",
       events: "رویدادها",
-      contact: "تماس با ما"
+      contact: "تماس با ما",
+      call: "تماس",
+      address: "آدرس",
+      skipLink: "رفتن به محتوای اصلی"
     },
     headings: {
       spaces: "فضاهای مرکز",
@@ -31,54 +34,54 @@ const SITE_CONTENT = {
     placeholders: {
       label: "طرح و راهنمای بصری تصویر",
       hero: "تصویری عریض، باکیفیت و با نور طبیعی از نمای ورودی یا فضای داخلی روشن و صمیمی مرکز که در آن افرادی از سنین مختلف (کودک، جوان، سالمند) در حال گفتگو، نوشیدن قهوه و لبخند زدن هستند.",
-      about: "یک عکس ترکیبی یا کلاژ مدرن از دورهمیهای چندنسلی، کارگاههای آموزشی و جلسات گفتگو در محیط مرکز.",
-      cafe: "نمای نزدیک از پیشخوان کافه با فنجانهای قهوه/چای، شیرینیهای تازه و افرادی که پشت میزهای چوبی در حال گفتگو و خنده هستند.",
-      library: "قفسههای چوبی پر از کتابهای فارسی، آلمانی و انگلیسی همراه با یک صندلی راحت برای مطالعه و نورپردازی گرم.",
-      language: "گروهی کوچک از افراد دایرهوار دور یک میز نشستهاند و با تختهسیاه یا یادداشتهای روی میز در حال مکالمه و تمرین زبان هستند.",
-      children: "کودکان در حال نقاشی، بازیهای گروهی یا گوش دادن به کتابخوانی با لبخند و شور و شوق.",
+      about: "یک عکس ترکیبی یا کلاژ مدرن از دورهمی‌های چندنسلی، کارگاه‌های آموزشی و جلسات گفتگو در محیط مرکز.",
+      cafe: "نمای نزدیک از پیشخوان کافه با فنجان‌های قهوه/چای، شیرینی‌های تازه و افرادی که پشت میزهای چوبی در حال گفتگو و خنده هستند.",
+      library: "قفسه‌های چوبی پر از کتاب‌های فارسی، آلمانی و انگلیسی همراه با یک صندلی راحت برای مطالعه و نورپردازی گرم.",
+      language: "گروهی کوچک از افراد دایره‌وار دور یک میز نشسته‌اند و با تخته‌سیاه یا یادداشت‌های روی میز در حال مکالمه و تمرین زبان هستند.",
+      children: "کودکان در حال نقاشی، بازی‌های گروهی یا گوش دادن به کتابخوانی با لبخند و شور و شوق.",
       intergenerational: "یک فرد سالمند و یک جوان در حال بازی شطرنج یا گفتگو روی یک صندلی در حال خندیدن.",
       music: "فردی در حال نواختن یک ساز سنتی یا مدرن در یک محفل کوچک و صمیمی یا تابلوی نقاشی در حال تکمیل.",
-      health: "یک جلسه اطلاعرسانی صمیمی که در آن یک متخصص در حال صحبت با حاضرین درباره سلامت عمومی است.",
-      social: "دو نفر در حال بررسی فرمها یا یک لپتاپ پشت میز مشاوره.",
+      health: "یک جلسه اطلاع‌رسانی صمیمی که در آن یک متخصص در حال صحبت با حاضرین درباره سلامت عمومی است.",
+      social: "دو نفر در حال بررسی فرم‌ها یا یک لپ‌تاپ پشت میز مشاوره.",
       austria: "گروهی از اعضای مرکز در حال بازدید از یک مکان تاریخی یا موزه در شهر وین.",
       persian: "سفره یلدا یا نوروز آراسته شده با عناصر سنتی یا اجرای موسیقی اصیل ایرانی.",
-      intercultural: "پرچمها یا المانهای چندفرهنگی همراه با افرادی با پوششها یا پسزمینههای گوناگون در حال گفتگو.",
-      volunteering: "عکس دستهجمعی از داوطلبان مرکز با لبخند و نشان دادن حس همکاری و دوستی.",
-      humanrights: "نمادی از صلح، آزادی و دستهای گرهخورده به نشانه همبستگی انسانی.",
+      intercultural: "پرچم‌ها یا المان‌های چندفرهنگی همراه با افرادی با پوشش‌ها یا پس‌زمینه‌های گوناگون در حال گفتگو.",
+      volunteering: "عکس دسته‌جمعی از داوطلبان مرکز با لبخند و نشان دادن حس همکاری و دوستی.",
+      humanrights: "نمادی از صلح، آزادی و دست‌های گره‌خورده به نشانه همبستگی انسانی.",
       weekly: "یک اینفوگرافیک زیبا و خوانا از برنامه هفتگی.",
-      eventsImg: "کارتهای نمایش رویدادها دارای عکس، پوستر، تاریخ و دکمه ثبتنام.",
-      hours: "آیکون ساعت یا گرافیک زیبای نمایشدهنده زمان کاری روی شیشه ورودی مرکز.",
+      eventsImg: "کارت‌های نمایش رویدادها دارای عکس، پوستر، تاریخ و دکمه ثبت‌نام.",
+      hours: "آیکون ساعت یا گرافیک زیبای نمایش‌دهنده زمان کاری روی شیشه ورودی مرکز.",
       contactImg: "تصویر کد QR اینستاگرام جهت اسکن سریع + نقشه گوگل مپ از موقعیت دقیق مرکز."
     },
     sections: {
       s1: {
         title: "خانه شیر و خورشید",
         subtitle: "فرهنگ · دیدار · آموزش · همبستگی",
-        intro1: "مکانی باز برای انسانهایی با پیشینهها و نسلهای گوناگون.",
-        intro2: "خانه شیر و خورشید یک فضای باز برای دیدار، فرهنگ و فعالیت اجتماعی در وین است؛ جایی که کافه، کتابخانه، آموزش، فرهنگ، ارتباط اجتماعی و فعالیت داوطلبانه در کنار یکدیگر قرار گرفتهاند.",
+        intro1: "مکانی باز برای انسان‌هایی با پیشینه‌ها و نسل‌های گوناگون.",
+        intro2: "خانه شیر و خورشید یک فضای باز برای دیدار، فرهنگ و فعالیت اجتماعی در وین است؛ جایی که کافه، کتابخانه، آموزش، فرهنگ، ارتباط اجتماعی و فعالیت داوطلبانه در کنار یکدیگر قرار گرفته‌اند.",
         intro3: "درهای ما به روی همه باز است."
       },
       s2: {
         title: "خانه شیر و خورشید چیست؟",
-        text: "خانه شیر و خورشید یک فضای فرهنگی و اجتماعی و یک محل دیدار در وین است. هدف این مرکز ایجاد محیطی آرام، در دسترس و بیننسلی است که در آن انسانها بتوانند با یکدیگر آشنا شوند، گفتگو کنند، از یکدیگر بیاموزند و در فعالیتهای مشترک شرکت کنند.",
+        text: "خانه شیر و خورشید یک فضای فرهنگی و اجتماعی و یک محل دیدار در وین است. هدف این مرکز ایجاد محیطی آرام، در دسترس و بین‌نسلی است که در آن انسان‌ها بتوانند با یکدیگر آشنا شوند، گفتگو کنند، از یکدیگر بیاموزند و در فعالیت‌های مشترک شرکت کنند.",
         focusTitle: "تمرکز اصلی مرکز بر این موارد است:",
         focus1: "مشارکت اجتماعی",
         focus2: "ادغام و همزیستی",
         focus3: "تقویت زبان",
         focus4: "چندزبانگی",
         focus5: "آموزش فرهنگی",
-        focus6: "ارتباط میان نسلها",
+        focus6: "ارتباط میان نسل‌ها",
         focus7: "فعالیت داوطلبانه",
-        note: "(این موارد مستقیماً در پروژه حمایت مالی تعریف شدهاند.)"
+        note: "(این محورها در چارچوب اهداف و برنامه‌های حمایتی مرکز دنبال می‌شوند.)"
       },
       s3: {
         title: "کافه و محل گردهمایی",
-        intro: "در کافه میتوان از موارد زیر لذت برد:",
+        intro: "در کافه می‌توان از موارد زیر لذت برد:",
         item1: "قهوه",
         item2: "چای",
-        item3: "نوشیدنیهای مختلف",
+        item3: "نوشیدنی‌های مختلف",
         item4: "کیک و شیرینی",
-        item5: "میانوعدههای سبک",
+        item5: "میان‌وعده‌های سبک",
         outro: "اما کافه فقط برای خوردن و نوشیدن نیست؛ هدف آن ایجاد یک فضای دوستانه برای گفتگو، آشنایی و ارتباط میان افراد است."
       },
       s4: {
@@ -90,59 +93,59 @@ const SITE_CONTENT = {
         item4: "ادبیات",
         item5: "تاریخ",
         item6: "فرهنگ ایران",
-        outro: "کتابخانه میتواند محلی برای آشنایی با ادبیات و فرهنگ ایرانی و همچنین گفتگو و تبادل نظر باشد."
+        outro: "کتابخانه می‌تواند محلی برای آشنایی با ادبیات و فرهنگ ایرانی و همچنین گفتگو و تبادل نظر باشد."
       },
       s5: {
         title: "زبان و آموزش",
-        intro1: "یکی از برنامههای اصلی مرکز، ایجاد فرصت برای تمرین زبان آلمانی در زندگی روزمره است.",
-        intro2: "این برنامه جایگزین کلاس رسمی و مدرکدار زبان نیست، بلکه مکمل آن است.",
-        topicsTitle: "موضوعات میتواند شامل موارد زیر باشد:",
+        intro1: "یکی از برنامه‌های اصلی مرکز، ایجاد فرصت برای تمرین زبان آلمانی در زندگی روزمره است.",
+        intro2: "این برنامه جایگزین کلاس رسمی و مدرک‌دار زبان نیست، بلکه مکمل آن است.",
+        topicsTitle: "موضوعات می‌تواند شامل موارد زیر باشد:",
         t1: "معرفی و آشنایی",
         t2: "خرید",
         t3: "مراجعه به پزشک",
-        t4: "استفاده از حملونقل عمومی",
+        t4: "استفاده از حمل‌ونقل عمومی",
         t5: "همسایگی",
         t6: "مدرسه و مهدکودک",
         t7: "محیط کار",
         t8: "ادارات",
-        t9: "موقعیتهای روزمره"
+        t9: "موقعیت‌های روزمره"
       },
       s6: {
         title: "کودکان و چندزبانگی",
-        intro: "ما چندزبانگی را یک فرصت و سرمایه برای آموزش، هویت و ارتباط میان فرهنگها میدانیم.",
-        programsTitle: "برنامههای پیشنهادی:",
+        intro: "ما چندزبانگی را یک فرصت و سرمایه برای آموزش، هویت و ارتباط میان فرهنگ‌ها می‌دانیم.",
+        programsTitle: "برنامه‌های پیشنهادی:",
         p1: "آموزش زبان به شکل بازی",
         p2: "خواندن و نوشتن",
-        p3: "داستانگویی",
+        p3: "داستان‌گویی",
         p4: "شعر",
         p5: "موسیقی",
-        p6: "فعالیتهای خلاقانه",
+        p6: "فعالیت‌های خلاقانه",
         p7: "ادبیات",
-        p8: "آشنایی با سنتهای فرهنگی",
-        p9: "پروژههای مشترک"
+        p8: "آشنایی با سنت‌های فرهنگی",
+        p9: "پروژه‌های مشترک"
       },
       s7: {
         title: "جوان و سالمند – با هم، نه تنها",
-        intro: "یکی از اهداف مهم مرکز، کاهش تنهایی و ایجاد ارتباط میان نسلهاست. برنامهها میتواند شامل موارد زیر باشد:",
+        intro: "یکی از اهداف مهم مرکز، کاهش تنهایی و ایجاد ارتباط میان نسل‌هاست. برنامه‌ها می‌تواند شامل موارد زیر باشد:",
         item1: "دورهمی و گفتگو",
-        item2: "پیادهروی",
-        item3: "شطرنج و بازیهای فکری",
+        item2: "پیاده‌روی",
+        item3: "شطرنج و بازی‌های فکری",
         item4: "مطالعه",
         item5: "موسیقی و آواز",
-        item6: "گفتوگو درباره خاطرات و تجربههای زندگی",
-        item7: "فعالیتهای خلاقانه",
-        item8: "جشنهای کوچک",
-        item9: "برنامههای فرهنگی",
-        item10: "برنامههای مشترک میان نسلها"
+        item6: "گفتگو درباره خاطرات و تجربه‌های زندگی",
+        item7: "فعالیت‌های خلاقانه",
+        item8: "جشن‌های کوچک",
+        item9: "برنامه‌های فرهنگی",
+        item10: "برنامه‌های مشترک میان نسل‌ها"
       },
       s8: {
         title: "موسیقی، هنر و خلاقیت",
-        intro: "مرکز میتواند میزبان موارد زیر باشد:",
-        item1: "کارگاههای موسیقی",
+        intro: "مرکز می‌تواند میزبان موارد زیر باشد:",
+        item1: "کارگاه‌های موسیقی",
         item2: "آواز",
         item3: "ساز و موسیقی گروهی",
-        item4: "برنامههای موسیقی برای کودکان",
-        item5: "شبهای فرهنگی",
+        item4: "برنامه‌های موسیقی برای کودکان",
+        item5: "شب‌های فرهنگی",
         item6: "شعر و ادبیات",
         item7: "نقاشی",
         item8: "عکاسی"
@@ -151,18 +154,18 @@ const SITE_CONTENT = {
         title: "سلامت و راهنمایی اجتماعی",
         intro: "در این بخش هدف ارائه اطلاعات و ایجاد مسیر دسترسی به خدمات موجود است، نه جایگزین شدن با پزشک یا مراکز تخصصی.",
         activitiesTitle: "فعالیت‌ها:",
-        a1: "اطلاعرسانی درباره پیشگیری و سلامت",
+        a1: "اطلاع‌رسانی درباره پیشگیری و سلامت",
         a2: "اطلاعات درباره سیستم بهداشت و درمان اتریش",
         a3: "راهنمایی در امور مربوط به مراقبت و زندگی روزمره",
-        a4: "معرفی افراد به مراکز تخصصی و حرفهای",
-        a5: "برنامهها و نشستهای اطلاعرسانی",
-        outro: "پروژه برای این بخش، وجود افرادی با تجربه در پزشکی، پرستاری و مشاوره را نیز پیشبینی کرده است."
+        a4: "معرفی افراد به مراکز تخصصی و حرفه‌ای",
+        a5: "برنامه‌ها و نشست‌های اطلاع‌رسانی",
+        outro: "پروژه برای این بخش، حضور افرادی با تجربه در زمینه پزشکی، پرستاری و مشاوره را نیز پیش‌بینی کرده است."
       },
       s10: {
         title: "راهنمایی و همراهی اجتماعی",
         intro: "کمک و راهنمایی در زمینه:",
         item1: "آموزش",
-        item2: "تحصیل و مهارتآموزی",
+        item2: "تحصیل و مهارت‌آموزی",
         item3: "کار",
         item4: "ادارات",
         item5: "سلامت",
@@ -170,66 +173,66 @@ const SITE_CONTENT = {
         item7: "مراکز و خدمات اجتماعی",
         item8: "مراکز مشاوره موجود",
         outro1: "اصل مهم این است:",
-        outro2: "ما جایگزین مراکز تخصصی نیستیم؛ بلکه پلی برای دسترسی آسانتر به خدمات موجود هستیم.",
-        outro3: "در صورت نیاز، افراد به مراکز تخصصی مربوط معرفی میشوند."
+        outro2: "ما جایگزین مراکز تخصصی نیستیم؛ بلکه پلی برای دسترسی آسان‌تر به خدمات موجود هستیم.",
+        outro3: "در صورت نیاز، افراد به مراکز تخصصی مربوط معرفی می‌شوند."
       },
       s11: {
         title: "اتریش را بشناسیم",
         intro: "ادغام فقط یادگیری زبان نیست؛ شناخت جامعه و فرهنگ محل زندگی نیز اهمیت دارد.",
-        programsTitle: "برنامههای پیشنهادی:",
-        p1: "پیادهرویهای گروهی",
-        p2: "موزهها",
-        p3: "کتابخانهها",
-        p4: "مکانهای تاریخی",
-        p5: "پارکها",
+        programsTitle: "برنامه‌های پیشنهادی:",
+        p1: "پیاده‌روی‌های گروهی",
+        p2: "موزه‌ها",
+        p3: "کتابخانه‌ها",
+        p4: "مکان‌های تاریخی",
+        p5: "پارک‌ها",
         p6: "مراکز عمومی",
-        p7: "برنامههای فرهنگی",
-        p8: "فعالیتهای مشترک",
-        outro: "همچنین هدف این است که اتریشیها نیز فرصت آشنایی با افراد و فرهنگهای دیگر را داشته باشند."
+        p7: "برنامه‌های فرهنگی",
+        p8: "فعالیت‌های مشترک",
+        outro: "همچنین هدف این است که شهروندان اتریشی نیز فرصت آشنایی با افراد و فرهنگ‌های دیگر را داشته باشند."
       },
       s12: {
         title: "فرهنگ، تاریخ و میراث ایران",
-        intro1: "یکی از بخشهای ویژه خانه شیر و خورشید، معرفی و زنده نگه داشتن زبان فارسی، ادبیات، تاریخ ایران، موسیقی، هنر، سنتها، جشنهای ایرانی و میراث فرهنگی ایران است.",
-        intro2: "برنامههایی مانند شب ایرانی، مهرگان، نوروز، شب یلدا، شبهای موسیقی و ادبیات، سخنرانیها و نشستهای فرهنگی میتوانند در این بخش معرفی شوند."
+        intro1: "یکی از بخش‌های ویژه خانه شیر و خورشید، معرفی و زنده نگه داشتن زبان فارسی، ادبیات، تاریخ ایران، موسیقی، هنر، سنت‌ها، جشن‌های ایرانی و میراث فرهنگی ایران است.",
+        intro2: "برنامه‌هایی مانند شب ایرانی، جشن مهرگان، نوروز، شب یلدا، شب‌های موسیقی و ادبیات، سخنرانی‌ها و نشست‌های فرهنگی در این بخش برگزار می‌شوند."
       },
       s13: {
-        title: "فرهنگها در کنار یکدیگر",
-        intro1: "خانه شیر و خورشید قرار نیست یک فضای بسته برای یک جامعه خاص باشد. هدف آن ایجاد ارتباط میان ایرانیان، اتریشیها و انسانهایی با پیشینههای مختلف است.",
-        intro2: "دو برنامهای که در پروژه نیز پیشبینی شدهاند:",
-        p1: "«اتریش با جهان دیدار میکند»",
+        title: "فرهنگ‌ها در کنار یکدیگر",
+        intro1: "خانه شیر و خورشید فضایی برای ارتباط میان ایرانیان، اتریشی‌ها و همه علاقه‌مندان با پیشینه‌های گوناگون است.",
+        intro2: "دو برنامه شاخص مرکز در این زمینه:",
+        p1: "«اتریش با جهان دیدار می‌کند»",
         p2: "«شب فرهنگی – موسیقی، ادبیات و دیدار»"
       },
       s14: {
         title: "فعالیت داوطلبانه",
-        text1: "خانه شیر و خورشید بر پایه فعالیت داوطلبانه شکل گرفته است. هدف این است که تواناییها و تخصصهای افراد داوطلب در زمینههایی مانند فرهنگ، زبان، موسیقی، آموزش، عکاسی، سلامت و مراقبت به شکلی سازمانیافته و پایدار مورد استفاده قرار گیرد. با هم میتوانیم این فضا را زنده نگه داریم.",
-        text2: "پروژه نیز تأکید دارد که حمایت مالی قرار نیست جایگزین فعالیت داوطلبانه شود، بلکه قرار است آن را سازماندهی و پایدارتر کند."
+        text1: "خانه شیر و خورشید بر پایه فعالیت داوطلبانه شکل گرفته است. هدف این است که توانایی‌ها و تخصص‌های افراد داوطلب در زمینه‌هایی مانند فرهنگ، زبان، موسیقی، آموزش، عکاسی، سلامت و مراقبت به شکلی سازمان‌یافته و پایدار مورد استفاده قرار گیرد. با هم می‌توانیم این فضا را زنده نگه داریم.",
+        text2: "حمایت‌های مالی مکمل فعالیت‌های داوطلبانه است و به سازماندهی و پایداری بیشتر برنامه‌ها کمک می‌کند."
       },
       s15: {
-        title: "آزادی، گفتوگو و حقوق بشر",
-        text1: "خانه شیر و خورشید فضایی برای گفتگو درباره آزادی، حقوق بشر و مسائل اجتماعی نیز فراهم میکند.",
-        text2: "این قسمت بهتر است در سایت خانه شیر و خورشید کوتاه باشد، چون سایت اصلی فعالیتهای حقوقبشری، سایت جداگانه Schild است.",
-        cta: "اطلاعات بیشتر درباره فعالیتهای شیلد ←"
+        title: "آزادی، گفتگو و حقوق بشر",
+        text1: "خانه شیر و خورشید فضایی برای گفتگو درباره آزادی، حقوق بشر و مسائل اجتماعی فراهم می‌کند.",
+        text2: "برای آگاهی و آشنایی بیشتر با فعالیت‌ها و برنامه‌های حقوق بشری، می‌توانید به وب‌سایت انجمن شیلد مراجعه فرمایید.",
+        cta: "اطلاعات بیشتر درباره فعالیت‌های شیلد ←"
       },
       s16: {
         title: "برنامه هفتگی",
-        note: "(این ساختار مستقیماً از برنامه پیشنهادی پروژه گرفته شده است.)",
+        note: "(برنامه هفتگی ممکن است با توجه به مناسبت‌ها و شرایط به‌روزرسانی شود.)",
         d1: "دوشنبه",
         d1_t: "زبان آلمانی در زندگی روزمره / کافه زبان",
-        d2: "سهشنبه",
-        d2_t: "جوان و سالمند / قهوه، گفتگو، بازی و پیادهروی",
+        d2: "سه‌شنبه",
+        d2_t: "جوان و سالمند / قهوه، گفتگو، بازی و پیاده‌روی",
         d3: "چهارشنبه",
-        d3_t: "کودکان / زبان، فرهنگ و فعالیتهای خلاقانه",
+        d3_t: "کودکان / زبان، فرهنگ و فعالیت‌های خلاقانه",
         d4: "پنجشنبه",
         d4_t: "راهنمایی و همراهی اجتماعی",
         d5: "جمعه",
         d5_t: "موسیقی، هنر، عکاسی یا برنامه فرهنگی",
         d6: "آخر هفته",
-        d6_t: "برنامههای فرهنگی، گردش و فعالیتهای بیننسلی"
+        d6_t: "برنامه‌های فرهنگی، گردش و فعالیت‌های بین‌نسلی"
       },
       s17: {
         title: "رویدادهای پیش رو",
-        text1: "در این قسمت رویدادها با عکس، تاریخ و توضیح کوتاه نمایش داده شوند.",
-        text2: "(پروژه هدفگذاری کرده که حداقل ماهانه یک برنامه فرهنگی یا موسیقی برگزار شود.)",
+        text1: "مرکز به صورت منظم میزبان رویدادهای متنوع فرهنگی، هنری و اجتماعی است.",
+        text2: "(حداقل یک برنامه ویژه فرهنگی یا موسیقی در هر ماه برگزار می‌شود.)",
         e1: "شب ایرانی",
         e2: "جشن مهرگان",
         e3: "شب موسیقی",
@@ -252,17 +255,18 @@ const SITE_CONTENT = {
         addrLabel: "آدرس:",
         addrValue: "Scherffenberggasse 5/1/R02, 1180 Wien (Waldeckgasse), Austria",
         phoneLabel: "تلفن:",
-        phoneValue: "0690 104 23 511 / 0681 103 20 389",
+        phoneValue: "b64:MDY5MCAxMDQgMjMgNTExIC8gMDY4MSAxMDMgMjAgMzg5",
         emailLabel: "ایمیل:",
-        emailValue: "contact@lionandsuncenter.org",
+        emailValue: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
         instaLabel: "اینستاگرام:",
-        instaValue: "@lionandsuncenter"
+        instaValue: "@lionandsuncenter",
+        saveContact: "ذخیره مخاطب"
       },
       s20: {
         text1: "با هم، نه تنها.",
         text2: "با یکدیگر، نه در کنار یکدیگر.",
         text3: "مشارکت به جای انزوا.",
-        text4: "دیدار، پایهای برای همزیستی و ادغام."
+        text4: "دیدار، پایه‌ای برای همزیستی و ادغام."
       }
     }
   },
@@ -280,7 +284,10 @@ const SITE_CONTENT = {
       activities: "Aktivitäten & Angebote",
       schedule: "Wochenprogramm",
       events: "Veranstaltungen",
-      contact: "Kontakt"
+      contact: "Kontakt",
+      call: "Anrufen",
+      address: "Adresse",
+      skipLink: "Zum Hauptinhalt springen"
     },
     headings: {
       spaces: "Unsere Räume",
@@ -319,7 +326,7 @@ const SITE_CONTENT = {
       },
       s2: {
         title: "Was ist das Haus des Löwen und der Sonne?",
-        text: "Das Haus des Löwen und der Sonne ist ein kultureller, sozialer Raum und ein Ort der Begegnung in Wien. Das Ziel dieses Zentrums ist es, eine friedliche, zugängliche und generationenübergreifende Umgebung zu schaffen, in der sich Menschen kennenlernen, austauschen, voneinander lernen und an gemeinsamen Aktivitäten teilnehmen können.",
+        text: "Das Haus des Löwen und der Sonne ist ein kultureller und sozialer Raum sowie ein Ort der Begegnung in Wien. Das Ziel dieses Zentrums ist es, eine friedliche, zugängliche und generationenübergreifende Umgebung zu schaffen, in der sich Menschen kennenlernen, austauschen, voneinander lernen und an gemeinsamen Aktivitäten teilnehmen können.",
         focusTitle: "Der Schwerpunkt des Zentrums liegt auf folgenden Bereichen:",
         focus1: "Soziale Teilhabe",
         focus2: "Integration und Zusammenleben",
@@ -328,28 +335,28 @@ const SITE_CONTENT = {
         focus5: "Kulturelle Bildung",
         focus6: "Generationenverbindung",
         focus7: "Ehrenamtliche Tätigkeit",
-        note: "(Diese Punkte sind direkt im geförderten Projekt definiert.)"
+        note: "(Diese Schwerpunkte werden im Rahmen der gemeinnützigen Projekte des Zentrums gefördert.)"
       },
       s3: {
         title: "Café und Begegnungsort",
-        intro: "Im Café kann man genießen:",
+        intro: "In unserem Café genießen Sie:",
         item1: "Kaffee",
         item2: "Tee",
         item3: "Verschiedene Getränke",
         item4: "Kuchen und Gebäck",
         item5: "Leichte Snacks",
-        outro: "Aber das Café dient nicht nur dem Essen und Trinken; sein Ziel ist es, eine freundliche Atmosphäre für Gespräche, Kennenlernen und Verbindungen zwischen Menschen zu schaffen."
+        outro: "Das Café dient jedoch nicht nur dem Verzehr von Speisen und Getränken – sein Hauptziel ist es, eine freundliche Atmosphäre für Gespräche, Begegnung und das gegenseitige Kennenlernen zu schaffen."
       },
       s4: {
         title: "Bibliothek und Lesen",
         intro: "Ein ruhiger Ort für:",
-        item1: "Studium",
-        item2: "Bücherlesen",
-        item3: "Lernen",
-        item4: "Literatur",
+        item1: "Lesen und Schmökern",
+        item2: "Bücher und Literatur",
+        item3: "Lernen und Vertiefen",
+        item4: "Kulturaustausch",
         item5: "Geschichte",
         item6: "Iranische Kultur",
-        outro: "Die Bibliothek kann ein Ort sein, um die iranische Literatur und Kultur kennenzulernen sowie für Gespräche und den Austausch von Meinungen."
+        outro: "Die Bibliothek ist ein Ort, um die persische Literatur und Kultur kennenzulernen sowie für den inspirierenden Gedanken- und Meinungsaustausch."
       },
       s5: {
         title: "Sprache und Bildung",
@@ -429,7 +436,7 @@ const SITE_CONTENT = {
         item7: "Soziale Einrichtungen und Dienste",
         item8: "Bestehende Beratungsstellen",
         outro1: "Der wichtigste Grundsatz lautet:",
-        outro2: "Wir sind kein Ersatz für Fachstellen; sondern eine Brücke für einen leichteren Zugang zu bestehenden Diensten.",
+        outro2: "Wir sind kein Ersatz für Fachstellen, sondern eine Brücke für einen leichteren Zugang zu bestehenden Diensten.",
         outro3: "Bei Bedarf werden die Personen an die entsprechenden Fachstellen vermittelt."
       },
       s11: {
@@ -448,30 +455,30 @@ const SITE_CONTENT = {
       },
       s12: {
         title: "Kultur, Geschichte und Erbe des Iran",
-        intro1: "Einer der besonderen Bereiche des Hauses des Löwen und der Sonne ist die Vorstellung und Lebendigerhaltung von persischer Sprache, Literatur, iranischer Geschichte, Musik, Kunst, Traditionen, iranischen Festen und dem kulturellen Erbe des Iran.",
-        intro2: "Veranstaltungen wie der Iranische Abend, das Mehregan-Fest, Nowruz-Fest (Neujahr), die Yalda-Nacht, Musik- und Literaturabende sowie kulturelle Vorträge und Seminare können in diesem Bereich präsentiert werden."
+        intro1: "Einer der besonderen Schwerpunkte des Hauses des Löwen und der Sonne ist die Pflege und Vermittlung der persischen Sprache, Literatur, der iranischen Geschichte, Musik, Kunst und Traditionen sowie des reichen Kulturerbes des Iran.",
+        intro2: "Veranstaltungen wie der Iranische Abend, das Mehregan-Fest, Nouruz (iranisches Neujahr), die Yalda-Nacht, Musik- und Literaturabende sowie Fachvorträge und Gesprächsrunden bereichern dieses Angebot."
       },
       s13: {
-        title: "Kulturen beieinander",
-        intro1: "Das Haus des Löwen und der Sonne soll kein geschlossener Raum für eine bestimmte Gemeinschaft sein. Sein Ziel ist es, Verbindungen zwischen Iranern, Österreichern und Menschen mit unterschiedlichen Hintergründen herzustellen.",
-        intro2: "Zwei Programme, die im Projekt vorgesehen sind:",
+        title: "Kulturen im Dialog",
+        intro1: "Das Haus des Löwen und der Sonne versteht sich als offener Begegnungsort für alle Menschen. Unser Ziel ist es, Verbindungen zwischen Menschen iranischer, österreichischer und vielfältiger internationaler Herkunft zu schaffen.",
+        intro2: "Zwei feste Programmpunkte des Zentrums:",
         p1: "„Österreich trifft die Welt“",
         p2: "„Kulturabend – Musik, Literatur und Begegnung“"
       },
       s14: {
         title: "Ehrenamtliches Engagement",
         text1: "Das Haus des Löwen und der Sonne basiert auf ehrenamtlicher Tätigkeit. Das Ziel ist es, die Fähigkeiten und das Fachwissen von Freiwilligen in Bereichen wie Kultur, Sprache, Musik, Bildung, Fotografie, Gesundheit und Pflege organisiert und nachhaltig zu nutzen. Gemeinsam können wir diesen Raum lebendig erhalten.",
-        text2: "Das Projekt betont auch, dass die finanzielle Unterstützung die ehrenamtliche Arbeit nicht ersetzen, sondern strukturieren und nachhaltiger gestalten soll."
+        text2: "Die Projektförderung versteht sich als wertvolle Unterstützung, um das ehrenamtliche Engagement gezielt zu strukturieren und langfristig zu sichern."
       },
       s15: {
         title: "Freiheit, Dialog und Menschenrechte",
         text1: "Das Haus des Löwen und der Sonne bietet auch Raum für Diskussionen über Freiheit, Menschenrechte und soziale Fragen.",
-        text2: "Dieser Abschnitt sollte auf der Website des Löwe-und-Sonne-Zentrums kurz gehalten werden, da die Hauptseite für Menschenrechtsaktivitäten die separate Website des Vereins Schild ist.",
-        cta: "Mehr Informationen über die Aktivitäten des Vereins Schild ←"
+        text2: "Ausführliche Informationen zu unseren Menschenrechtsaktivitäten und Initiativen finden Sie auf der Website des Trägervereins Schild.",
+        cta: "Mehr über die Aktivitäten des Vereins Schild erfahren ←"
       },
       s16: {
         title: "Wochenprogramm",
-        note: "(Diese Struktur stammt direkt aus dem vorgeschlagenen Projektplan.)",
+        note: "(Das Wochenprogramm wird regelmäßig aktualisiert und an aktuelle Anlässe angepasst.)",
         d1: "Montag",
         d1_t: "Deutsch im Alltag / Sprachencafé",
         d2: "Dienstag",
@@ -487,8 +494,8 @@ const SITE_CONTENT = {
       },
       s17: {
         title: "Kommende Veranstaltungen",
-        text1: "In diesem Bereich werden Veranstaltungen mit Bild, Datum und einer kurzen Beschreibung angezeigt.",
-        text2: "(Das Projekt zielt darauf ab, mindestens einmal im Monat ein Kultur- oder Musikprogramm zu organisieren.)",
+        text1: "Das Zentrum veranstaltet regelmäßig vielfältige kulturelle, künstlerische und soziale Events.",
+        text2: "(Mindestens einmal im Monat findet ein besonderes Kultur- oder Musikprogramm statt.)",
         e1: "Iranischer Abend",
         e2: "Mehregan-Fest",
         e3: "Musikabend",
@@ -502,7 +509,7 @@ const SITE_CONTENT = {
         d2: "Samstag:",
         d2_t: "09:00 – 16:00 Uhr",
         d3: "Sonntag:",
-        d3_t: "Je nach Programm und Sonderveranstaltungen"
+        d3_t: "Nach Vorankündigung und bei Sonderveranstaltungen"
       },
       s19: {
         title: "Kontaktieren Sie uns",
@@ -511,11 +518,12 @@ const SITE_CONTENT = {
         addrLabel: "Adresse:",
         addrValue: "Scherffenberggasse 5/1/R02, 1180 Wien (Waldeckgasse), Österreich",
         phoneLabel: "Telefon:",
-        phoneValue: "0690 104 23 511 / 0681 103 20 389",
+        phoneValue: "b64:MDY5MCAxMDQgMjMgNTExIC8gMDY4MSAxMDMgMjAgMzg5",
         emailLabel: "E-Mail:",
-        emailValue: "contact@lionandsuncenter.org",
+        emailValue: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
         instaLabel: "Instagram:",
-        instaValue: "@lionandsuncenter"
+        instaValue: "@lionandsuncenter",
+        saveContact: "Kontakt speichern"
       },
       s20: {
         text1: "Gemeinsam statt einsam.",
@@ -539,7 +547,10 @@ const SITE_CONTENT = {
       activities: "Activities & Services",
       schedule: "Weekly Schedule",
       events: "Events",
-      contact: "Contact"
+      contact: "Contact",
+      call: "Call Us",
+      address: "Address",
+      skipLink: "Skip to main content"
     },
     headings: {
       spaces: "Our Spaces",
@@ -587,7 +598,7 @@ const SITE_CONTENT = {
         focus5: "Cultural Education",
         focus6: "Intergenerational Connection",
         focus7: "Volunteering",
-        note: "(These items are directly defined in the financial support project.)"
+        note: "(These focus areas are supported through the center's community initiatives.)"
       },
       s3: {
         title: "Café and Gathering Space",
@@ -597,7 +608,7 @@ const SITE_CONTENT = {
         item3: "Various drinks",
         item4: "Cakes and pastries",
         item5: "Light snacks",
-        outro: "But the café is not just for eating and drinking; its goal is to create a friendly space for conversation, getting to know one another, and connecting people."
+        outro: "However, the café is more than a place to eat and drink; its purpose is to foster a warm, welcoming environment for dialogue, connection, and community."
       },
       s4: {
         title: "Library and Reading Room",
@@ -608,7 +619,7 @@ const SITE_CONTENT = {
         item4: "Literature",
         item5: "History",
         item6: "Iranian culture",
-        outro: "The library can serve as a place to become acquainted with Persian literature and culture, as well as for dialogue and exchange of ideas."
+        outro: "The library serves as an inspiring space to discover Persian literature and culture, and engage in open dialogue and the exchange of ideas."
       },
       s5: {
         title: "Language and Education",
@@ -640,12 +651,12 @@ const SITE_CONTENT = {
         p9: "Joint projects"
       },
       s7: {
-        title: "Youth and Elderly – Together, Not Alone",
+        title: "Youth and Seniors – Together, Not Alone",
         intro: "One of the important goals of the center is to reduce loneliness and connect generations. Programs can include:",
         item1: "Social gatherings and conversations",
         item2: "Walks",
         item3: "Chess and board games",
-        item4: "Reading sessions",
+        item4: "Reading and book discussions",
         item5: "Music and singing",
         item6: "Conversations about life memories and experiences",
         item7: "Creative activities",
@@ -669,15 +680,15 @@ const SITE_CONTENT = {
         title: "Health and Social Guidance",
         intro: "In this section, the goal is to provide information and create access routes to existing services, not to replace doctors or specialized centers.",
         activitiesTitle: "Activities:",
-        a1: "Informing about prevention and health",
+        a1: "Information on health and prevention",
         a2: "Information about the Austrian healthcare system",
         a3: "Guidance on care and daily life matters",
         a4: "Referral to specialized and professional services",
         a5: "Information sessions and meetings",
-        outro: "The project for this section also plans for the involvement of experienced individuals in medicine, nursing, and counseling."
+        outro: "The center also welcomes the valuable participation of individuals with experience in medicine, nursing, and counseling."
       },
       s10: {
-        title: "Social Accompaniment and Guidance",
+        title: "Social Guidance and Accompaniment",
         intro: "Help and guidance in the areas of:",
         item1: "Education",
         item2: "Studies and vocational training",
@@ -688,7 +699,7 @@ const SITE_CONTENT = {
         item7: "Social centers and services",
         item8: "Existing counseling centers",
         outro1: "An important principle is:",
-        outro2: "We are not a replacement for specialized centers; rather, we are a bridge for easier access to existing services.",
+        outro2: "We are not a replacement for specialized institutions; rather, we serve as a bridge for easier access to existing services.",
         outro3: "If necessary, individuals are referred to the relevant specialized centers."
       },
       s11: {
@@ -707,37 +718,37 @@ const SITE_CONTENT = {
       },
       s12: {
         title: "Persian Culture, History and Heritage",
-        intro1: "One of the special sections of the House of the Lion and the Sun is to introduce and keep alive Persian language, literature, history of Iran, music, art, traditions, Iranian celebrations, and the cultural heritage of Iran.",
-        intro2: "Programs such as Persian Evening, Mehregan, Nowruz, Yalda Night, music and literature evenings, and cultural lectures and gatherings can be introduced in this section."
+        intro1: "One of the key missions of the House of the Lion and the Sun is celebrating and preserving Persian language, literature, Iranian history, music, arts, traditions, celebrations, and cultural heritage.",
+        intro2: "Events such as Persian Evenings, the Mehregan Festival, Nowruz (Persian New Year), Yalda Night, music and poetry evenings, lectures, and cultural workshops are held regularly."
       },
       s13: {
-        title: "Cultures Side by Side",
-        intro1: "The House of the Lion and the Sun is not meant to be a closed space for a specific community. Its goal is to create connections between Iranians, Austrians, and people of different backgrounds.",
-        intro2: "Two programs planned in the project:",
+        title: "Cultures in Dialogue",
+        intro1: "The House of the Lion and the Sun is an open and welcoming community space for all. Its goal is to build meaningful connections between Iranians, Austrians, and people of diverse cultural backgrounds.",
+        intro2: "Signature initiatives hosted at the center:",
         p1: "\"Austria meets the World\"",
         p2: "\"Cultural Evening – Music, Literature and Gathering\""
       },
       s14: {
         title: "Volunteering",
         text1: "The House of the Lion and the Sun is built upon volunteering. The goal is to channel the skills and expertise of volunteers in fields such as culture, language, music, education, photography, health, and care in an organized and sustainable manner. Together we can keep this space alive.",
-        text2: "The project emphasizes that financial funding is not meant to replace volunteering, but rather to organize it and make it more sustainable."
+        text2: "Financial support serves as a foundation to structure and sustain our volunteering initiatives for the long term."
       },
       s15: {
         title: "Freedom, Dialogue and Human Rights",
-        text1: "The House of the Lion and the Sun also provides a space for dialogue about freedom, human rights, and social issues.",
-        text2: "This section is best kept brief on the Lion and Sun Center website, as the primary website for human rights activities is the separate Schild website.",
-        cta: "More information about Schild activities ←"
+        text1: "The House of the Lion and the Sun also provides an open platform for dialogue on freedom, human rights, and social matters.",
+        text2: "Comprehensive information about human rights initiatives and advocacy can be found on the website of the Schild Association.",
+        cta: "Learn more about the Schild Association ←"
       },
       s16: {
         title: "Weekly Schedule",
-        note: "(This layout is drawn directly from the proposed project schedule.)",
+        note: "(The weekly schedule is regularly updated and adapted to special occasions.)",
         d1: "Monday",
         d1_t: "German in Everyday Life / Language Café",
         d2: "Tuesday",
-        d2_t: "Youth and Elderly / Coffee, Conversation, Games and Walks",
+        d2_t: "Youth and Seniors / Coffee, Conversation, Games and Walks",
         d3: "Wednesday",
         d3_t: "Children / Language, Culture and Creative Activities",
-        d4: "Thursday", // Note: The prompt translation uses English names for days in English block
+        d4: "Thursday",
         d4_t: "Social Accompaniment and Guidance",
         d5: "Friday",
         d5_t: "Music, Art, Photography or Cultural Program",
@@ -746,8 +757,8 @@ const SITE_CONTENT = {
       },
       s17: {
         title: "Upcoming Events",
-        text1: "In this section, events are displayed with a photo, date, and a short description.",
-        text2: "(The project aims to organize at least one cultural or music program per month.)",
+        text1: "The center regularly hosts a diverse range of cultural, artistic, and community events.",
+        text2: "(At least one special cultural or musical program is held each month.)",
         e1: "Iranian Evening",
         e2: "Mehregan Celebration",
         e3: "Music Evening",
@@ -761,20 +772,21 @@ const SITE_CONTENT = {
         d2: "Saturday:",
         d2_t: "09:00 – 16:00",
         d3: "Sunday:",
-        d3_t: "Based on scheduled programs and special events"
+        d3_t: "By announcement and for special events"
       },
       s19: {
         title: "Get in Touch",
         nameLabel: "Name:",
-        nameValue: "House of the Lion and the Sun / Center Locale",
+        nameValue: "House of the Lion and the Sun / Community Center",
         addrLabel: "Address:",
         addrValue: "Scherffenberggasse 5/1/R02, 1180 Vienna (Waldeckgasse), Austria",
         phoneLabel: "Phone:",
-        phoneValue: "0690 104 23 511 / 0681 103 20 389",
+        phoneValue: "b64:MDY5MCAxMDQgMjMgNTExIC8gMDY4MSAxMDMgMjAgMzg5",
         emailLabel: "Email:",
-        emailValue: "contact@lionandsuncenter.org",
+        emailValue: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
         instaLabel: "Instagram:",
-        instaValue: "@lionandsuncenter"
+        instaValue: "@lionandsuncenter",
+        saveContact: "Save Contact"
       },
       s20: {
         text1: "Together, not alone.",
@@ -788,14 +800,15 @@ const SITE_CONTENT = {
 
 // Contact details that never change between languages.
 const SITE_CONSTANTS = {
-  email: "contact@lionandsuncenter.org",
+  email: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
   instagramHandle: "lionandsuncenter",
   instagramUrl: "https://instagram.com/lionandsuncenter",
-  whatsapp: "+43 681 103 20 389",
-  whatsappUrl: "https://wa.me/436811032039",
-  phone: "+43 690 104 23 511",
-  phoneUrl: "tel:+436901042311",
-  website: "https://www.lionandsuncenter.org"
+  whatsapp: "b64:KzQzIDY4MSAxMDMgMjAgMzg5",
+  whatsappUrl: "b64:aHR0cHM6Ly93YS5tZS80MzY4MTEwMzIwMzk=",
+  phone: "b64:KzQzIDY5MCAxMDQgMjMgNTEx",
+  phoneUrl: "b64:dGVsOis0MzY5MDEwNDIzMTE=",
+  website: "https://www.lionandsuncenter.org",
+  schildWebsite: "https://schildiran.com/"
 };
 
 if (typeof module !== "undefined") {
