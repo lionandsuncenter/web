@@ -264,10 +264,10 @@ const SITE_CONTENT = {
         qrText: "اینستاگرام"
       },
       s20: {
-        text1: "با هم، نه تنها.",
-        text2: "با یکدیگر، نه در کنار یکدیگر.",
-        text3: "مشارکت به جای انزوا.",
-        text4: "دیدار، پایه‌ای برای همزیستی و ادغام."
+        text1: "با هم — نه در تنهایی.",
+        text2: "با یکدیگر — نه صرفاً در کنار هم.",
+        text3: "مشارکت — به‌جای انزوا.",
+        text4: "دیدار: بنیاد همزیستی و ادغام."
       }
     }
   },
@@ -528,10 +528,10 @@ const SITE_CONTENT = {
         qrText: "Instagram"
       },
       s20: {
-        text1: "Gemeinsam statt einsam.",
-        text2: "Miteinander statt nebeneinander.",
-        text3: "Teilhabe statt Isolation.",
-        text4: "Begegnung als Fundament für Zusammenleben und Integration."
+        text1: "Gemeinsam — niemals einsam.",
+        text2: "Miteinander — nicht bloß nebeneinander.",
+        text3: "Teilhabe — statt Isolation.",
+        text4: "Begegnung: das Fundament für Zusammenleben und Integration."
       }
     }
   },
@@ -792,10 +792,10 @@ const SITE_CONTENT = {
         qrText: "Instagram"
       },
       s20: {
-        text1: "Together, not alone.",
-        text2: "With each other, not next to each other.",
-        text3: "Participation instead of isolation.",
-        text4: "Gathering as the foundation for coexistence and integration."
+        text1: "Together — never alone.",
+        text2: "With one another — not merely side by side.",
+        text3: "Inclusion — over isolation.",
+        text4: "Encounter: the foundation for coexistence and integration."
       }
     }
   }
