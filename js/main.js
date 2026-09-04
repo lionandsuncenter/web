@@ -76,6 +76,7 @@
   function renderFooterLinks(content) {
     const emailLink = document.getElementById("emailLink");
     const instaLink = document.getElementById("instagramLink");
+    const qrInstaLink = document.getElementById("qrInstagramLink");
     const waLink = document.getElementById("whatsappLink");
     const phoneLink = document.getElementById("phoneLink");
     const websiteLink = document.getElementById("websiteLink");
@@ -94,6 +95,7 @@
       if (span) span.textContent = email;
     }
     if (instaLink) instaLink.href = SITE_CONSTANTS.instagramUrl;
+    if (qrInstaLink) qrInstaLink.href = SITE_CONSTANTS.instagramUrl;
     if (waLink) {
       waLink.href = whatsappUrl;
       const span = waLink.querySelector("span");
@@ -104,7 +106,7 @@
       const span = phoneLink.querySelector("span");
       if (span) span.textContent = phone;
     }
-    if (websiteLink) websiteLink.href = SITE_CONSTANTS.website;
+    if (websiteLink) websiteLink.href = SITE_CONSTANTS.schildWebsite || SITE_CONSTANTS.website;
 
     if (mobilePhoneLink) mobilePhoneLink.href = phoneUrl;
     if (mobileWhatsappLink) mobileWhatsappLink.href = whatsappUrl;
@@ -426,6 +428,48 @@
   }
 
   /* ---------------------------------------------------------------- */
+  /* Dynamic VCF Contact Generation                                   */
+  /* ---------------------------------------------------------------- */
+
+  function initSaveContact() {
+    const saveBtn = document.getElementById("saveContactBtn");
+    if (!saveBtn) return;
+
+    saveBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const email = decodeValue(SITE_CONSTANTS.email);
+      const phoneRaw = decodeValue(SITE_CONSTANTS.phone).replace(/\s+/g, "");
+      const waRaw = decodeValue(SITE_CONSTANTS.whatsapp).replace(/\s+/g, "");
+
+      const vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "FN:Haus des Löwen und der Sonne | خانه شیر و خورشید",
+        "ORG:Haus des Löwen und der Sonne | خانه شیر و خورشید",
+        "N:;Haus des Löwen und der Sonne | خانه شیر و خورشید;;;",
+        `EMAIL;TYPE=INTERNET,WORK:${email}`,
+        `TEL;TYPE=CELL,VOICE:${phoneRaw}`,
+        `TEL;TYPE=WORK,VOICE:${waRaw}`,
+        "ADR;TYPE=WORK:;;Scherffenberggasse 5/1/R02;Wien;;1180;Austria",
+        `URL:${SITE_CONSTANTS.website}`,
+        "X-ABShowAs:COMPANY",
+        "END:VCARD"
+      ].join("\r\n");
+
+      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "lion_and_sun_center.vcf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    });
+  }
+
+  /* ---------------------------------------------------------------- */
   /* Init                                                               */
   /* ---------------------------------------------------------------- */
 
@@ -446,5 +490,6 @@
     initProgressBar();
     initStickyHeader();
     initScrollReveal();
+    initSaveContact();
   });
 })();

@@ -255,12 +255,13 @@ const SITE_CONTENT = {
         addrLabel: "آدرس:",
         addrValue: "Scherffenberggasse 5/1/R02, 1180 Wien (Waldeckgasse), Austria",
         phoneLabel: "تلفن:",
-        phoneValue: "b64:MDY5MCAxMDQgMjMgNTExIC8gMDY4MSAxMDMgMjAgMzg5",
+        phoneValue: "b64:KzQzIDY5MCAxMDQgMjMgNTExIC8gKzQzIDY4MSAxMDMgMjAgMzg5",
         emailLabel: "ایمیل:",
         emailValue: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
         instaLabel: "اینستاگرام:",
         instaValue: "@lionandsuncenter",
-        saveContact: "ذخیره مخاطب"
+        saveContact: "ذخیره مخاطب",
+        qrText: "اینستاگرام"
       },
       s20: {
         text1: "با هم، نه تنها.",
@@ -518,12 +519,13 @@ const SITE_CONTENT = {
         addrLabel: "Adresse:",
         addrValue: "Scherffenberggasse 5/1/R02, 1180 Wien (Waldeckgasse), Österreich",
         phoneLabel: "Telefon:",
-        phoneValue: "b64:MDY5MCAxMDQgMjMgNTExIC8gMDY4MSAxMDMgMjAgMzg5",
+        phoneValue: "b64:KzQzIDY5MCAxMDQgMjMgNTExIC8gKzQzIDY4MSAxMDMgMjAgMzg5",
         emailLabel: "E-Mail:",
         emailValue: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
         instaLabel: "Instagram:",
         instaValue: "@lionandsuncenter",
-        saveContact: "Kontakt speichern"
+        saveContact: "Kontakt speichern",
+        qrText: "Instagram"
       },
       s20: {
         text1: "Gemeinsam statt einsam.",
@@ -781,12 +783,13 @@ const SITE_CONTENT = {
         addrLabel: "Address:",
         addrValue: "Scherffenberggasse 5/1/R02, 1180 Vienna (Waldeckgasse), Austria",
         phoneLabel: "Phone:",
-        phoneValue: "b64:MDY5MCAxMDQgMjMgNTExIC8gMDY4MSAxMDMgMjAgMzg5",
+        phoneValue: "b64:KzQzIDY5MCAxMDQgMjMgNTExIC8gKzQzIDY4MSAxMDMgMjAgMzg5",
         emailLabel: "Email:",
         emailValue: "b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==",
         instaLabel: "Instagram:",
         instaValue: "@lionandsuncenter",
-        saveContact: "Save Contact"
+        saveContact: "Save Contact",
+        qrText: "Instagram"
       },
       s20: {
         text1: "Together, not alone.",
@@ -804,9 +807,9 @@ const SITE_CONSTANTS = {
   instagramHandle: "lionandsuncenter",
   instagramUrl: "https://instagram.com/lionandsuncenter",
   whatsapp: "b64:KzQzIDY4MSAxMDMgMjAgMzg5",
-  whatsappUrl: "b64:aHR0cHM6Ly93YS5tZS80MzY4MTEwMzIwMzk=",
+  whatsappUrl: "b64:aHR0cHM6Ly93YS5tZS80MzY4MTEwMzIwMzg5",
   phone: "b64:KzQzIDY5MCAxMDQgMjMgNTEx",
-  phoneUrl: "b64:dGVsOis0MzY5MDEwNDIzMTE=",
+  phoneUrl: "b64:dGVsOis0MzY5MDEwNDIzNTEx",
   website: "https://www.lionandsuncenter.org",
   schildWebsite: "https://schildiran.com/"
 };

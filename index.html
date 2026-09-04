@@ -64,7 +64,7 @@
     referrerpolicy="no-referrer" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
 </head>
 
 <body id="top">
@@ -76,7 +76,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="Lion and Sun Center">
-        <img src="assets/img/logo-lion-sun.jpg" alt="Lion and Sun Center emblem" class="brand-emblem" width="52"
+        <img src="assets/img/logo-lion-sun.jpg?v=2" alt="Lion and Sun Center emblem" class="brand-emblem" width="52"
           height="52" />
         <span class="brand-name" data-i18n="sections.s1.title">خانه شیر و خورشید</span>
       </a>
@@ -534,8 +534,8 @@
                 بشر و مسائل اجتماعی فراهم می‌کند.</p>
               <p class="card-desc text-muted" data-i18n="sections.s15.text2">برای آگاهی و آشنایی بیشتر با فعالیت‌ها و
                 برنامه‌های حقوق بشری، می‌توانید به وب‌سایت انجمن شیلد مراجعه فرمایید.</p>
-              <a href="https://schildiran.com/" target="_blank" rel="noopener noreferrer"
-                class="btn btn-gold cta-btn" data-i18n="sections.s15.cta">اطلاعات بیشتر درباره فعالیت‌های شیلد ←</a>
+              <a href="https://schildiran.com/" target="_blank" rel="noopener noreferrer" class="btn btn-gold cta-btn"
+                data-i18n="sections.s15.cta">اطلاعات بیشتر درباره فعالیت‌های شیلد ←</a>
             </div>
             <div class="image-placeholder">
               <div class="placeholder-content">
@@ -635,11 +635,10 @@
             <div class="card-content">
               <div class="contact-header">
                 <h2 class="card-title" data-i18n="sections.s19.title">با ما در ارتباط باشید</h2>
-                <a href="assets/lion_and_sun_center.vcf" download="lion_and_sun_center.vcf" class="btn-save-contact"
-                  id="saveContactBtn" aria-label="Save contact to phone">
+                <button type="button" class="btn-save-contact" id="saveContactBtn" aria-label="Save contact to phone">
                   <i class="fa-solid fa-plus" aria-hidden="true"></i>
                   <span data-i18n="sections.s19.saveContact">ذخیره مخاطب</span>
-                </a>
+                </button>
               </div>
               <div class="contact-details">
                 <div class="contact-item">
@@ -653,7 +652,7 @@
                 </div>
                 <div class="contact-item">
                   <strong data-i18n="sections.s19.phoneLabel">تلفن:</strong>
-                  <span data-i18n="sections.s19.phoneValue">0690 104 23 511 / 0681 103 20 389</span>
+                  <span data-i18n="sections.s19.phoneValue">+43 690 104 23 511 / +43 681 103 20 389</span>
                 </div>
                 <div class="contact-item">
                   <strong data-i18n="sections.s19.emailLabel">ایمیل:</strong>
@@ -746,14 +745,19 @@
 
       <div class="footer-col footer-col--qr">
         <img src="assets/img/qr-code.png" alt="Instagram QR Code" class="qr-code-img" width="105" height="105" />
+        <a id="qrInstagramLink" href="https://instagram.com/lionandsuncenter" target="_blank" rel="noopener noreferrer"
+          class="qr-link">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span class="qr-code-text" data-i18n="sections.s19.qrText">اینستاگرام</span>
+        </a>
       </div>
 
       <div class="footer-col footer-col--org">
-        <a href="https://schildiran.com/" target="_blank" rel="noopener noreferrer" aria-label="Schild Royalist Association website">
+        <a href="https://schildiran.com/" target="_blank" rel="noopener noreferrer"
+          aria-label="Schild Royalist Association website">
           <img src="assets/img/logo-schild.jpg" alt="Schild Royalist Association emblem" />
         </a>
-        <a id="websiteLink" href="https://www.lionandsuncenter.org" target="_blank"
-          rel="noopener noreferrer">www.lionandsuncenter.org</a>
+        <a id="websiteLink" href="https://schildiran.com" target="_blank" rel="noopener noreferrer">schildiran.com</a>
       </div>
     </div>
 
@@ -791,8 +795,8 @@
     </a>
   </nav>
 
-  <script src="js/i18n.js?v=6"></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/i18n.js?v=8"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 
 </html>
