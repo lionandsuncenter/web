@@ -1,0 +1,5 @@
+policy.yaml
+.DS_Store
+.agents/
+.vscode/
+.antigravity/
