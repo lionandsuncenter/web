@@ -3,3 +3,4 @@ policy.yaml
 .agents/
 .vscode/
 .antigravity/
+.DS_Store

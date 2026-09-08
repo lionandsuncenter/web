@@ -1289,6 +1289,13 @@ body {
   text-align: end;
 }
 
+.contact-phone,
+.contact-item [data-i18n="sections.s19.phoneValue"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
