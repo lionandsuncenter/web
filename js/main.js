@@ -68,6 +68,14 @@
     document.title = content.meta.title;
     const descTag = document.querySelector('meta[name="description"]');
     if (descTag) descTag.setAttribute("content", content.meta.description);
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", content.meta.title);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", content.meta.description);
+    const twTitle = document.querySelector('meta[name="twitter:title"], meta[property="twitter:title"]');
+    if (twTitle) twTitle.setAttribute("content", content.meta.title);
+    const twDesc = document.querySelector('meta[name="twitter:description"], meta[property="twitter:description"]');
+    if (twDesc) twDesc.setAttribute("content", content.meta.description);
     document.documentElement.lang = content.htmlLang;
     document.documentElement.dir = content.dir;
     document.body.classList.toggle("lang-latin", lang !== "fa");
