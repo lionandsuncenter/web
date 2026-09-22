@@ -7,4 +7,4 @@
 - **زمان:** شنبه ۱۰ اکتبر ۲۰۲۶ | ساعت ۱۷:۰۰ الی ۲۱:۰۰
 - **مکان:** Scherffenberggasse 5/1/R02, 1180 Wien
 - **برنامه‌ها:** موسیقی و هنرهای نمایشی، تاریخ و فرهنگ، همبستگی و دوستی، پذیرایی ویژه و شام (ورودی: ۳۰ یورو)
-- **هماهنگی و رزرو:** [0043 676 7051002](tel:+436767051002) | [contact@lionandsuncenter.org](mailto:contact@lionandsuncenter.org)
+- **هماهنگی و رزرو:** [b64:MDA0MyA2NzYgNzA1MTAwMg==](b64:dGVsOis0MzY3NjcwNTEwMDI=) | [b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==](b64:bWFpbHRvOmNvbnRhY3RAbGlvbmFuZHN1bmNlbnRlci5vcmc=)

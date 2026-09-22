@@ -225,6 +225,58 @@
   }
 
   /**
+   * Decodes Base64 obfuscated values (prefixed with "b64:"), matching the project-wide standard.
+   */
+  function decodeValue(val) {
+    if (typeof val === "string" && val.startsWith("b64:")) {
+      try {
+        return atob(val.substring(4));
+      } catch (e) {
+        return val;
+      }
+    }
+    return val;
+  }
+
+  /**
+   * Decodes obfuscated contact details (Base64) strictly client-side at the moment of display,
+   * injecting decoded telephone numbers, email addresses, and labels directly into the live DOM.
+   */
+  function hydrateObfuscatedContent(container) {
+    if (!container) return;
+
+    // 1. Obfuscated Links (phone tel: and email mailto:)
+    container.querySelectorAll("[data-b64-href]").forEach((el) => {
+      const rawHref = el.getAttribute("data-b64-href");
+      const rawText = el.getAttribute("data-b64-text");
+      const decodedHref = decodeValue(rawHref);
+      const decodedText = decodeValue(rawText);
+
+      if (decodedHref) {
+        el.href = decodedHref;
+        el.removeAttribute("data-b64-href");
+      }
+      if (decodedText) {
+        if (decodedHref && decodedHref.startsWith("tel:")) {
+          el.innerHTML = `<i class="fa-solid fa-phone" aria-hidden="true" style="font-size:0.75rem;margin-inline-end:5px;"></i><span>${decodedText}</span>`;
+        } else if (decodedHref && decodedHref.startsWith("mailto:")) {
+          el.innerHTML = `<i class="fa-solid fa-envelope" aria-hidden="true" style="font-size:0.75rem;margin-inline-end:5px;"></i><span>${decodedText}</span>`;
+        } else {
+          el.textContent = decodedText;
+        }
+        el.removeAttribute("data-b64-text");
+      }
+    });
+
+    // 2. Obfuscated Inline Spans
+    container.querySelectorAll("[data-b64]").forEach((el) => {
+      const val = el.getAttribute("data-b64");
+      el.textContent = decodeValue(val);
+      el.removeAttribute("data-b64");
+    });
+  }
+
+  /**
    * Lightweight, safe Markdown to HTML parser.
    */
   function parseMarkdown(md) {
@@ -252,15 +304,22 @@
     html = html.replace(/\*(.*?)\*/g, "<em>$1</em>");
     html = html.replace(/_(.*?)_/g, "<em>$1</em>");
 
-    // Links: [text](url) - supports https, http, mailto, tel, and local anchors
+    // Links: [text](url) - supports https, http, mailto, tel, b64:, and local anchors.
+    // Obfuscates b64: contact links into data attributes to prevent plain-text exposure in HTML markup.
     html = html.replace(
-      /\[(.*?)\]\(((?:https?:\/\/|mailto:|tel:|#|\/)[^\s)]+)\)/g,
+      /\[(.*?)\]\(((?:https?:\/\/|mailto:|tel:|b64:|#|\/)[^\s)]+)\)/g,
       (match, label, url) => {
         const isExternal = url.startsWith("http");
-        const targetAttr = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        const targetAttr = isExternal ? ' target="_blank" rel="noopener noreferrer"' : "";
+        if (url.startsWith("b64:") || label.startsWith("b64:")) {
+          return `<a href="#" data-b64-href="${url}" data-b64-text="${label}" class="popup-link"></a>`;
+        }
         return `<a href="${url}"${targetAttr} class="popup-link">${label}</a>`;
       }
     );
+
+    // Standalone b64: tokens outside attributes (e.g. {{b64:...}} or b64:...)
+    html = html.replace(/(^|[\s>(])(b64:[A-Za-z0-9+/=]+)(?=[\s<).,]|$)/g, '$1<span data-b64="$2"></span>');
 
     // Unordered lists
     html = html.replace(/(?:^[ \t]*[-*][ \t]+(.*?)(?:\r?\n|$))+/gm, (match) => {
@@ -457,6 +516,7 @@
 
       if (slideText) {
         textWrap.innerHTML = parseMarkdown(slideText);
+        hydrateObfuscatedContent(textWrap);
       }
       slideEl.appendChild(textWrap);
 
@@ -833,6 +893,7 @@
             const partText = newParts[idx] !== undefined ? newParts[idx] : newParts[0] || "";
             item.textWrap.setAttribute("dir", newRtl ? "rtl" : "ltr");
             item.textWrap.innerHTML = parseMarkdown(partText);
+            hydrateObfuscatedContent(item.textWrap);
 
             // Update badge text
             item.badge.innerHTML =

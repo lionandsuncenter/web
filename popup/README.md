@@ -62,6 +62,24 @@ Use standard Markdown dividers (e.g. `---`, `***`, `___`) or slide tags (`<!-- s
 - If no delimiter is present, the same text applies to both slides.
 - Standard Markdown formatting is supported: `#`, `##`, `###`, `**bold**`, `*italic*`, `[link](url)`, and bullet lists `-`.
 
+### Contact Details Obfuscation (`b64:` Pattern)
+To protect contact details from web scrapers and prevent plain-text exposure in the source code, phone numbers and email addresses use Base64 encoding with the project-wide `b64:` prefix:
+```markdown
+[b64:<base64-label>](b64:<base64-url>)
+```
+
+*Example:*
+```markdown
+- **هماهنگی و رزرو:** [b64:MDA0MyA2NzYgNzA1MTAwMg==](b64:dGVsOis0MzY3NjcwNTEwMDI=) | [b64:Y29udGFjdEBsaW9uYW5kc3VuY2VudGVyLm9yZw==](b64:bWFpbHRvOmNvbnRhY3RAbGlvbmFuZHN1bmNlbnRlci5vcmc=)
+```
+
+- **Encoding helper (terminal):**
+  ```bash
+  echo -n "tel:+436767051002" | base64
+  echo -n "0043 676 7051002" | base64
+  ```
+- **Runtime Decryption:** The Markdown parser outputs safe HTML elements (`<a href="#" data-b64-href="..." data-b64-text="..."></a>`) that are decoded strictly client-side at the moment of display via `atob()` and injected directly into the live DOM with telephone / email micro-icons.
+
 ---
 
 ## 3. Gestures & Interactions
