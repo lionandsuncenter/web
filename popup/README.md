@@ -117,6 +117,7 @@ The popup automatically detects whether your media is **Landscape (horizontal)**
     - **LTR (English & German):** Media sits on the **left**, descriptive text on the **right**.
     - **RTL (Persian):** Media sits on the **right**, descriptive text on the **left** for a natural reading flow.
   - **Mobile Screens (width <= 680px):** Gracefully stacks with a proportioned vertical viewport (`44vh`) to ensure the modal never overflows smaller smartphone screens.
+  - **Dedicated Mobile Pagination Bar:** On mobile screens, the slide pagination indicators are anchored in their own dedicated footer bar below the scrollable text area. This eliminates any overlap with headings, event details, or contact buttons and guarantees smooth vertical scrolling across all viewport sizes.
 - **Uncropped Display:** Uses `object-fit: contain` with an ambient dark backdrop to guarantee that no poster dates, logos, or video details are ever cropped.
 
 

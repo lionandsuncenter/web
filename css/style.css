@@ -2505,23 +2505,21 @@ body.popup-open {
   pointer-events: none;
 }
 
-/* Indicators (Dots) */
+/* Indicators (Dots) - Dedicated Bar by Default (Mobile & Stacked) */
 .popup-indicators {
-  position: absolute;
-  top: 255px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 25;
+  position: relative;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 7px;
-  background: rgba(12, 9, 6, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(201, 162, 74, 0.3);
-  padding: 4px 12px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  gap: 8px;
+  padding: 10px 0 12px;
+  background: rgba(14, 11, 7, 0.96);
+  border-top: 1px solid rgba(201, 162, 74, 0.22);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+  z-index: 25;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .popup-dot {
@@ -2552,6 +2550,21 @@ body.popup-open {
     top: 50%;
   }
 
+  .popup-modal.is-portrait-layout .popup-indicators {
+    position: absolute;
+    top: auto;
+    bottom: 16px;
+    width: auto;
+    background: rgba(12, 9, 6, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 162, 74, 0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+  }
+
   /* LTR: Media on Left (0 to 58%) */
   .popup-modal.is-portrait-layout:not([dir="rtl"]) .popup-arrow-prev {
     left: 10px;
@@ -2564,8 +2577,6 @@ body.popup-open {
   .popup-modal.is-portrait-layout:not([dir="rtl"]) .popup-indicators {
     left: 29%;
     right: auto;
-    top: auto;
-    bottom: 14px;
     transform: translateX(-50%);
   }
 
@@ -2581,8 +2592,6 @@ body.popup-open {
   .popup-modal.is-portrait-layout[dir="rtl"] .popup-indicators {
     right: 29%;
     left: auto;
-    top: auto;
-    bottom: 14px;
     transform: translateX(50%);
   }
 }
@@ -2797,48 +2806,77 @@ html[dir="ltr"] .popup-fab {
     max-width: 94vw;
   }
 
+  .popup-carousel-container {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popup-carousel-track {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
   .popup-slide.is-portrait {
     flex-direction: column;
   }
 
-  /* Media takes prominent top space (48vh) on mobile */
+  /* Media takes upper viewport space (44vh) with fixed boundaries */
   .popup-slide.is-portrait .popup-media-wrap {
     width: 100%;
-    height: 48vh;
-    max-height: 380px;
-    min-height: 220px;
+    height: 44vh;
+    max-height: 350px;
+    min-height: 200px;
+    flex-shrink: 0;
   }
 
+  /* Content area scrolls independently within its allocated height */
   .popup-slide.is-portrait .popup-text-wrap {
     width: 100%;
-    padding: 0.9rem 1.2rem 1.2rem;
-    max-height: 34vh;
+    padding: 0.95rem 1.3rem 1.2rem;
+    max-height: 32vh;
     overflow-y: auto;
-    font-size: 0.86rem;
+    font-size: 0.88rem;
+    box-sizing: border-box;
   }
 
-  .popup-modal.is-portrait-layout .popup-arrow {
-    top: 24vh;
+  /* Arrows centered over the top media container */
+  .popup-arrow {
+    top: 22vh;
     width: 32px;
     height: 32px;
     font-size: 0.8rem;
   }
-  .popup-modal.is-portrait-layout .popup-arrow-prev {
+  .popup-arrow-prev {
     left: 8px;
     right: auto;
   }
-  .popup-modal.is-portrait-layout .popup-arrow-next {
+  .popup-arrow-next {
     right: 8px;
     left: auto;
   }
-  .popup-modal.is-portrait-layout .popup-indicators {
+
+  /* Dedicated bottom pagination bar: zero overlap with headings, text, or contact buttons */
+  .popup-indicators {
+    position: relative;
     top: auto;
     bottom: auto;
-    top: calc(48vh - 34px);
-    left: 50%;
+    left: auto;
     right: auto;
-    transform: translateX(-50%);
-    padding: 3px 10px;
+    transform: none;
+    width: 100%;
+    margin: 0;
+    padding: 9px 0 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(14, 11, 7, 0.96);
+    border-top: 1px solid rgba(201, 162, 74, 0.22);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.4);
+    z-index: 25;
+    flex-shrink: 0;
   }
 
   .popup-fab {
@@ -2856,20 +2894,22 @@ html[dir="ltr"] .popup-fab {
 
 @media (max-width: 480px) {
   .popup-slide.is-portrait .popup-media-wrap {
-    height: 45vh;
-    max-height: 340px;
+    height: 42vh;
+    max-height: 320px;
+    min-height: 190px;
   }
 
   .popup-slide.is-portrait .popup-text-wrap {
-    max-height: 36vh;
-    font-size: 0.84rem;
+    max-height: 32vh;
+    font-size: 0.85rem;
+    padding: 0.85rem 1.15rem 1.1rem;
   }
 
-  .popup-modal.is-portrait-layout .popup-arrow {
-    top: 22.5vh;
+  .popup-arrow {
+    top: 21vh;
   }
 
-  .popup-modal.is-portrait-layout .popup-indicators {
-    top: calc(45vh - 32px);
+  .popup-indicators {
+    padding: 8px 0 10px;
   }
 }
